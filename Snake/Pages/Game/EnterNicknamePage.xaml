@@ -61,7 +61,7 @@
             Grid.Row="0"
             Width="530"
             Height="150"
-            Source="/Images/BeforeTheStart/Logo.png" />
+            Source="/Images/Game/EnterNickname/Logo.png" />
 
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>

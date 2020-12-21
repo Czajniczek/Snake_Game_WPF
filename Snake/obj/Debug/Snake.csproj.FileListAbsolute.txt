@@ -180,7 +180,6 @@ C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Settings\CustomizedSetti
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Settings\DifficultyLevelPage.g.cs
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\MenuPage.g.cs
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Settings\MusicPage.g.cs
-C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\NewGamePage.g.cs
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\SettingsPage.g.cs
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Windows\ExitWindow.g.cs
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\App.g.cs
@@ -210,7 +209,6 @@ C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Settings\CustomizedSetti
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Settings\DifficultyLevelPage.baml
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\MenuPage.baml
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Settings\MusicPage.baml
-C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\NewGamePage.baml
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\SettingsPage.baml
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Windows\ExitWindow.baml
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake.g.resources
@@ -218,5 +216,8 @@ C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake.Properties.Resources.res
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake.csproj.GenerateResource.cache
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake.csproj.CopyComplete
-C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\BeforeStartPage.g.cs
-C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\BeforeStartPage.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\CountdownToStartGamePage.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\CountdownToStartGamePage.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\EnterNicknamePage.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\EnterNicknamePage.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\GeneratedInternalTypeHelper.g.cs

@@ -1,5 +1,6 @@
 ﻿using MaterialDesignThemes.Wpf;
 using Snake.Classes;
+using Snake.Enums;
 using Snake.Windows;
 using System;
 using System.Collections.Generic;
@@ -35,7 +36,7 @@ namespace Snake.Pages.Settings
             SetSnakeSpeed();
 
             gameMenu.OwnSettings = true;
-            gameMenu.Level = 1;
+            gameMenu.Level = LevelEnum.Easy;
 
             if (!gameMenu.MusicOn) Music_Icon.Kind = PackIconKind.MusicOff;
             else Music_Icon.Kind = PackIconKind.Music;
@@ -45,21 +46,21 @@ namespace Snake.Pages.Settings
         {
             switch (gameMenu.BonusFruit)
             {
-                case 1:
+                case BonusFruitFrequencyEnum.Rarely:
                     BonusFruit_TextBlock.Text = "RARELY";
                     //Level_TextBlock.Foreground = Brushes.Green;
                     LeftBonusFruit_Button.IsEnabled = false;
                     SetImage(imageName1: LeftBonusFruit_Image, imageName2: RightBonusFruit_Image, path: "/Images/Settings/CustomizedSettings/BonusFruit/Rarely.png");
                     break;
 
-                case 2:
+                case BonusFruitFrequencyEnum.Normally:
                     BonusFruit_TextBlock.Text = "NORMALLY";
                     LeftBonusFruit_Button.IsEnabled = true;
                     RightBonusFruit_Button.IsEnabled = true;
                     SetImage(imageName1: LeftBonusFruit_Image, imageName2: RightBonusFruit_Image, path: "/Images/Settings/CustomizedSettings/BonusFruit/Normally.png");
                     break;
 
-                case 3:
+                case BonusFruitFrequencyEnum.Often:
                     BonusFruit_TextBlock.Text = "OFTEN";
                     RightBonusFruit_Button.IsEnabled = false;
                     SetImage(imageName1: LeftBonusFruit_Image, imageName2: RightBonusFruit_Image, path: "/Images/Settings/CustomizedSettings/BonusFruit/Often.png");
@@ -74,7 +75,7 @@ namespace Snake.Pages.Settings
         {
             switch (gameMenu.SnakeSpeed)
             {
-                case 1:
+                case SnakeSpeedEnum.Slow:
                     DifficultyLevel_TextBlock.Text = "SLOW";
                     //Level_TextBlock.Foreground = Brushes.Green;
                     DifficultyLevel_TextBlock.Foreground = new SolidColorBrush(Color.FromRgb(0, 128, 0));
@@ -82,15 +83,15 @@ namespace Snake.Pages.Settings
                     SetImage(imageName1: LeftDifficultyLevel_Image, imageName2: RightDifficultyLevel_Image, path: "/Images/Settings/CustomizedSettings/SnakeSpeed/Slow.png");
                     break;
 
-                case 2:
-                    DifficultyLevel_TextBlock.Text = "NORMALLY";
+                case SnakeSpeedEnum.Medium:
+                    DifficultyLevel_TextBlock.Text = "MEDIUM";
                     RightDifficultyLevel_Button.IsEnabled = true;
                     LeftDifficultyLevel_Button.IsEnabled = true;
-                    DifficultyLevel_TextBlock.Foreground = new SolidColorBrush(Color.FromRgb(200, 190, 30));
+                    DifficultyLevel_TextBlock.Foreground = new SolidColorBrush(Color.FromRgb(230, 215, 0));
                     SetImage(imageName1: LeftDifficultyLevel_Image, imageName2: RightDifficultyLevel_Image, path: "/Images/Settings/CustomizedSettings/SnakeSpeed/Normal.png");
                     break;
 
-                case 3:
+                case SnakeSpeedEnum.Fast:
                     DifficultyLevel_TextBlock.Text = "FAST";
                     RightDifficultyLevel_Button.IsEnabled = false;
                     DifficultyLevel_TextBlock.Foreground = new SolidColorBrush(Color.FromRgb(153, 0, 0));

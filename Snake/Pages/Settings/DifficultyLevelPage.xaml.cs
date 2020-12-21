@@ -1,5 +1,6 @@
 ﻿using MaterialDesignThemes.Wpf;
 using Snake.Classes;
+using Snake.Enums;
 using Snake.Windows;
 using System;
 using System.Collections.Generic;
@@ -34,8 +35,8 @@ namespace Snake.Pages
             SetLevel();
 
             gameMenu.OwnSettings = false;
-            gameMenu.BonusFruit = 1;
-            gameMenu.SnakeSpeed = 1;
+            gameMenu.BonusFruit = BonusFruitFrequencyEnum.Rarely;
+            gameMenu.SnakeSpeed = SnakeSpeedEnum.Slow;
 
             if (!gameMenu.MusicOn) Music_Icon.Kind = PackIconKind.MusicOff;
             else Music_Icon.Kind = PackIconKind.Music;
@@ -45,7 +46,7 @@ namespace Snake.Pages
         {
             switch (gameMenu.Level)
             {
-                case 1:
+                case LevelEnum.Easy:
                     Level_TextBlock.Text = "EASY";
                     //Level_TextBlock.Foreground = Brushes.Green;
                     Level_TextBlock.Foreground = new SolidColorBrush(Color.FromRgb(0, 128, 0));
@@ -53,7 +54,7 @@ namespace Snake.Pages
                     SetImage(path: "/Images/Settings/DifficultyLevel/EasySnake1.png");
                     break;
 
-                case 2:
+                case LevelEnum.Medium:
                     Level_TextBlock.Text = "MEDIUM";
                     Up_Button.IsEnabled = true;
                     Down_Button.IsEnabled = true;
@@ -61,7 +62,7 @@ namespace Snake.Pages
                     SetImage(path: "/Images/Settings/DifficultyLevel/MediumSnake.png");
                     break;
 
-                case 3:
+                case LevelEnum.Hard:
                     Level_TextBlock.Text = "HARD";
                     Up_Button.IsEnabled = false;
                     Level_TextBlock.Foreground = new SolidColorBrush(Color.FromRgb(153, 0, 0));

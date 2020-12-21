@@ -86,14 +86,21 @@
     </ApplicationDefinition>
     <Compile Include="Classes\GameResult.cs" />
     <Compile Include="Classes\GameMenu.cs" />
+    <Compile Include="Converters\PlaceImageConverter.cs" />
+    <Compile Include="Enums\BonusFruitFrequencyEnum.cs" />
+    <Compile Include="Enums\LevelEnum.cs" />
+    <Compile Include="Enums\SnakeSpeedEnum.cs" />
     <Compile Include="Pages\AuthorPage.xaml.cs">
       <DependentUpon>AuthorPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\BeforeStartPage.xaml.cs">
-      <DependentUpon>BeforeStartPage.xaml</DependentUpon>
+    <Compile Include="Pages\Game\EnterNicknamePage.xaml.cs">
+      <DependentUpon>EnterNicknamePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\BestResultsPage.xaml.cs">
       <DependentUpon>BestResultsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Game\CountdownToStartGamePage.xaml.cs">
+      <DependentUpon>CountdownToStartGamePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Settings\CustomizedSettingsPage.xaml.cs">
       <DependentUpon>CustomizedSettingsPage.xaml</DependentUpon>
@@ -134,11 +141,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\BeforeStartPage.xaml">
+    <Page Include="Pages\Game\EnterNicknamePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\BestResultsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Game\CountdownToStartGamePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,10 +169,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\NewGamePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\SettingsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -174,9 +181,6 @@
   <ItemGroup>
     <Compile Include="Pages\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\NewGamePage.xaml.cs">
-      <DependentUpon>NewGamePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -263,7 +267,12 @@
     <Resource Include="Images\Settings\DifficultyLevel\EasySnake.png" />
     <Resource Include="Images\Settings\DifficultyLevel\EasySnake1.png" />
     <Resource Include="Images\Settings\DifficultyLevel\MediumSnake.png" />
-    <Resource Include="Images\BeforeTheStart\Logo.png" />
+    <Resource Include="Images\Game\EnterNickname\Logo1.png" />
+    <Resource Include="Images\Game\CountdownToStartGame\1.png" />
+    <Resource Include="Images\Game\CountdownToStartGame\2.png" />
+    <Resource Include="Images\Game\CountdownToStartGame\3.png" />
+    <Resource Include="Images\Game\CountdownToStartGame\Start1.png" />
+    <Resource Include="Images\Game\EnterNickname\Logo.png" />
     <Content Include="Music\Benny_Hill_Yakety_Sax.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
