@@ -136,7 +136,7 @@ namespace Snake.Pages
 
         private void NewGameButton_Click(object sender, RoutedEventArgs e)
         {
-            //TODO NEW GAME
+            NavigationService.Navigate(new BeforeStartPage(gameMenu: gameMenu));
         }
 
         private void BestResultsButton_Click(object sender, RoutedEventArgs e)
