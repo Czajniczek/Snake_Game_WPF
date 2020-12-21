@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Snake.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Media;
@@ -10,13 +11,13 @@ namespace Snake.Classes
     public class GameMenu
     {
         #region DIFFICULTY LEVEL
-        public int Level { get; set; }
+        public LevelEnum Level { get; set; }
         #endregion
 
         #region OWN SETTINGS
         public bool OwnSettings { get; set; }
-        public int SnakeSpeed { get; set; }
-        public int BonusFruit { get; set; }
+        public SnakeSpeedEnum SnakeSpeed { get; set; }
+        public BonusFruitFrequencyEnum BonusFruit { get; set; }
         #endregion
 
         #region MUSIC
@@ -33,7 +34,8 @@ namespace Snake.Classes
 
         public GameMenu() { }
 
-        public GameMenu(int Level, bool OwnSettings, int SnakeSpeed, int BonusFruit, string MusicPath, bool MusicOn)
+        public GameMenu(LevelEnum Level, bool OwnSettings, SnakeSpeedEnum SnakeSpeed, BonusFruitFrequencyEnum BonusFruit,
+            string MusicPath, bool MusicOn)
         {
             this.Level = Level;
             this.OwnSettings = OwnSettings;

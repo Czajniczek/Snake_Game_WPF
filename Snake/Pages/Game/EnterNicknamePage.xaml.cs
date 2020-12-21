@@ -118,7 +118,7 @@ namespace Snake.Pages
 
         private void NewGameButton_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new CountdownToStartGamePage(gameMenu: gameMenu));
         }
         #endregion
     }

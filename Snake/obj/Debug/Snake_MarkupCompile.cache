@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Studia\Projects\Snake_Game_WPF\Snake\App.xaml
-13-1304738248
+13-147199867
 2473350567
-17756483972
+21-276590622
 16-343330719
-Images\Author\Czajkowski.xaml;Images\Author\Gabriel.xaml;MainWindow.xaml;Pages\AuthorPage.xaml;Pages\BeforeStartPage.xaml;Pages\BestResultsPage.xaml;Pages\Settings\CustomizedSettingsPage.xaml;Pages\Settings\DifficultyLevelPage.xaml;Pages\MenuPage.xaml;Pages\Settings\MusicPage.xaml;Pages\NewGamePage.xaml;Pages\SettingsPage.xaml;Windows\ExitWindow.xaml;
+Images\Author\Czajkowski.xaml;Images\Author\Gabriel.xaml;MainWindow.xaml;Pages\AuthorPage.xaml;Pages\Game\EnterNicknamePage.xaml;Pages\BestResultsPage.xaml;Pages\Game\CountdownToStartGamePage.xaml;Pages\Settings\CustomizedSettingsPage.xaml;Pages\Settings\DifficultyLevelPage.xaml;Pages\MenuPage.xaml;Pages\Settings\MusicPage.xaml;Pages\SettingsPage.xaml;Windows\ExitWindow.xaml;
 
 False
 

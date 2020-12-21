@@ -12,6 +12,16 @@
     Loaded="MenuPage_Loaded"
     mc:Ignorable="d">
 
+    <!--<Page.Resources>
+        <Style x:Key="ButtonAnimation" TargetType="Button">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>-->
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />

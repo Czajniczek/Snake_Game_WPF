@@ -1,4 +1,5 @@
 ﻿using Snake.Classes;
+using Snake.Enums;
 using Snake.Pages;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,9 @@ namespace Snake
 {
     public partial class MainWindow : Window
     {
-        readonly GameMenu gameMenu = new GameMenu(Level: 1, OwnSettings: false, SnakeSpeed: 1, BonusFruit: 1, MusicPath: "Music/Snake_Song.wav", MusicOn: true);
+        readonly GameMenu gameMenu = new GameMenu(Level: LevelEnum.Easy, OwnSettings: false,
+            SnakeSpeed: SnakeSpeedEnum.Slow, BonusFruit: BonusFruitFrequencyEnum.Rarely,
+            MusicPath: "Music/Snake_Song.wav", MusicOn: true);
 
         public MainWindow()
         {
