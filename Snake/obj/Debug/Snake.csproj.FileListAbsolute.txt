@@ -176,7 +176,6 @@ C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Images\Author\Gabriel.baml
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\MainWindow.g.cs
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\AuthorPage.g.cs
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\BestResultsPage.g.cs
-C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\EnterNicknamePage.g.cs
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Settings\CustomizedSettingsPage.g.cs
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Settings\DifficultyLevelPage.g.cs
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\MenuPage.g.cs
@@ -207,7 +206,6 @@ C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\App.baml
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\MainWindow.baml
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\AuthorPage.baml
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\BestResultsPage.baml
-C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\EnterNicknamePage.baml
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Settings\CustomizedSettingsPage.baml
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Settings\DifficultyLevelPage.baml
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\MenuPage.baml
@@ -220,3 +218,5 @@ C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake.Properties.Resources.res
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake.csproj.GenerateResource.cache
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake.csproj.CopyComplete
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\BeforeStartPage.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\BeforeStartPage.baml

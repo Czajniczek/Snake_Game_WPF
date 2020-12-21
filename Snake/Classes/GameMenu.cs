@@ -27,6 +27,10 @@ namespace Snake.Classes
         public bool MusicOn { get; set; }
         #endregion
 
+        #region GAME
+        public string nickname { get; set; }
+        #endregion
+
         public GameMenu() { }
 
         public GameMenu(int Level, bool OwnSettings, int SnakeSpeed, int BonusFruit, string MusicPath, bool MusicOn)

@@ -89,11 +89,11 @@
     <Compile Include="Pages\AuthorPage.xaml.cs">
       <DependentUpon>AuthorPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\BeforeStartPage.xaml.cs">
+      <DependentUpon>BeforeStartPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\BestResultsPage.xaml.cs">
       <DependentUpon>BestResultsPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\EnterNicknamePage.xaml.cs">
-      <DependentUpon>EnterNicknamePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Settings\CustomizedSettingsPage.xaml.cs">
       <DependentUpon>CustomizedSettingsPage.xaml</DependentUpon>
@@ -134,11 +134,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\BestResultsPage.xaml">
+    <Page Include="Pages\BeforeStartPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\EnterNicknamePage.xaml">
+    <Page Include="Pages\BestResultsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -263,6 +263,7 @@
     <Resource Include="Images\Settings\DifficultyLevel\EasySnake.png" />
     <Resource Include="Images\Settings\DifficultyLevel\EasySnake1.png" />
     <Resource Include="Images\Settings\DifficultyLevel\MediumSnake.png" />
+    <Resource Include="Images\BeforeTheStart\Logo.png" />
     <Content Include="Music\Benny_Hill_Yakety_Sax.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
