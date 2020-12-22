@@ -2,6 +2,7 @@
 using Snake.UserControls;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -40,6 +41,10 @@ namespace Snake.Pages.Game
         private int gameDelayMiliseconds = 500;
         private int specialFruitDelaySeconds = 1;
         private int X, Y;
+        private int scoreLength = 0;
+        private string line;
+        private DateTime dateTime;
+        private StreamWriter streamWriter;
 
         private Key LastKey = Key.Right;
         private bool Top = false;
@@ -67,6 +72,9 @@ namespace Snake.Pages.Game
         private void GamePage_Loaded(object sender, RoutedEventArgs e)
         {
             MainGrid.DataContext = gameMenu;
+
+            dateTime = DateTime.Now;
+            streamWriter = new StreamWriter("Results.txt", true);
 
             snake = new List<Rectangle>();
 
@@ -184,12 +192,7 @@ namespace Snake.Pages.Game
             {
                 case Key.Left:
                     X -= 20;
-                    if (X < 0 || TailHitted(X, Y))
-                    {
-                        specialFruitDispatcherTimer.Stop();
-                        gameDispatcherTimer.Stop();
-                        NavigationService.Navigate(new GameOverPage(gameMenu: gameMenu, score: score));
-                    }
+                    if (X < 0 || TailHitted(X, Y)) GameOver();
                     else
                     {
                         snake[0].SetValue(Canvas.TopProperty, Y);
@@ -199,12 +202,7 @@ namespace Snake.Pages.Game
 
                 case Key.Right:
                     X += 20;
-                    if (X >= 640 || TailHitted(X, Y))
-                    {
-                        specialFruitDispatcherTimer.Stop();
-                        gameDispatcherTimer.Stop();
-                        NavigationService.Navigate(new GameOverPage(gameMenu: gameMenu, score: score));
-                    }
+                    if (X >= 640 || TailHitted(X, Y)) GameOver();
                     else
                     {
                         snake[0].SetValue(Canvas.TopProperty, Y);
@@ -214,12 +212,7 @@ namespace Snake.Pages.Game
 
                 case Key.Up:
                     Y -= 20;
-                    if (Y < 0 || TailHitted(X, Y))
-                    {
-                        specialFruitDispatcherTimer.Stop();
-                        gameDispatcherTimer.Stop();
-                        NavigationService.Navigate(new GameOverPage(gameMenu: gameMenu, score: score));
-                    }
+                    if (Y < 0 || TailHitted(X, Y)) GameOver();
                     else
                     {
                         snake[0].SetValue(Canvas.TopProperty, Y);
@@ -229,12 +222,7 @@ namespace Snake.Pages.Game
 
                 case Key.Down:
                     Y += 20;
-                    if (Y >= 440 || TailHitted(X, Y))
-                    {
-                        specialFruitDispatcherTimer.Stop();
-                        gameDispatcherTimer.Stop();
-                        NavigationService.Navigate(new GameOverPage(gameMenu: gameMenu, score: score));
-                    }
+                    if (Y >= 440 || TailHitted(X, Y)) GameOver();
                     else
                     {
                         snake[0].SetValue(Canvas.TopProperty, Y);
@@ -290,6 +278,46 @@ namespace Snake.Pages.Game
                     }
                 }
             }
+        }
+
+        private void GameOver()
+        {
+            specialFruitDispatcherTimer.Stop();
+            gameDispatcherTimer.Stop();
+
+            scoreLength = score.ToString().Length;
+
+            switch (scoreLength)
+            {
+                case 1:
+                    line = "000" + score.ToString() + " " + gameMenu.Nickname + " " + gameMenu.Level.ToString().ToUpper() + " " + dateTime.ToShortDateString().ToString();
+                    streamWriter.WriteLine(line);
+                    streamWriter.Close();
+                    break;
+
+                case 2:
+                    line = "00" + score.ToString() + " " + gameMenu.Nickname + " " + gameMenu.Level.ToString().ToUpper() + " " + dateTime.ToShortDateString().ToString();
+                    streamWriter.WriteLine(line);
+                    streamWriter.Close();
+                    break;
+
+                case 3:
+                    line = "0" + score.ToString() + " " + gameMenu.Nickname + " " + gameMenu.Level.ToString().ToUpper() + " " + dateTime.ToShortDateString().ToString();
+                    streamWriter.WriteLine(line);
+                    streamWriter.Close();
+                    break;
+
+                case 4:
+                    line = score.ToString() + " " + gameMenu.Nickname + " " + gameMenu.Level.ToString().ToUpper() + " " + dateTime.ToShortDateString().ToString();
+                    streamWriter.WriteLine(line);
+                    streamWriter.Close();
+                    break;
+
+                default:
+                    break;
+            }
+
+            NavigationService.Navigate(new GameOverPage(gameMenu: gameMenu, score: score));
         }
 
         private bool TailHitted(double X, double Y)
