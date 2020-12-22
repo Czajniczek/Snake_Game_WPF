@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Snake.UserControls
 {
-    /// <summary>
-    /// Interaction logic for SpecialFruit.xaml
-    /// </summary>
     public partial class SpecialFruit : UserControl
     {
         public SpecialFruit()

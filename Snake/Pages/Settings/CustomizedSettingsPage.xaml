@@ -71,24 +71,6 @@
                 Height="150"
                 Source="/Images/Settings/CustomizedSettings/Logo.png" />
 
-            <!--<TextBlock
-                Grid.Row="0"
-                HorizontalAlignment="Center"
-                FontSize="60"
-                FontWeight="ExtraBold"
-                Foreground="Green">
-                CUSTOMIZED
-            </TextBlock>
-            <TextBlock
-                Grid.Row="0"
-                Margin="0,50,0,0"
-                HorizontalAlignment="Center"
-                FontSize="60"
-                FontWeight="ExtraBold"
-                Foreground="Green">
-                SETTINGS
-            </TextBlock>-->
-
         </Grid>
         <Border
             Grid.Row="1"
@@ -247,6 +229,6 @@
             FontSize="13">
             The difficulty level will be set to personalized.
         </TextBlock>-->
-
+        
     </Grid>
 </Page>

@@ -9,7 +9,7 @@
     Title="BeforeStartPage"
     d:DesignHeight="600"
     d:DesignWidth="750"
-    Loaded="BeforeStartPage_Loaded"
+    Loaded="EnterNicknamePage_Loaded"
     mc:Ignorable="d">
 
     <Grid>
@@ -27,7 +27,6 @@
             Click="BackButton_Click"
             Foreground="Black"
             IsCancel="True"
-            IsDefault="True"
             Style="{StaticResource MaterialDesignIconButton}"
             ToolTip="Back">
             <materialDesign:PackIcon Kind="ArrowLeft" />
@@ -52,7 +51,6 @@
             VerticalAlignment="Top"
             Click="ExitButton_Click"
             Foreground="Black"
-            IsCancel="True"
             Style="{StaticResource MaterialDesignIconButton}"
             ToolTip="Exit">
             <materialDesign:PackIcon Kind="WindowClose" />

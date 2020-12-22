@@ -32,7 +32,6 @@
                 Click="BackButton_Click"
                 Foreground="Black"
                 IsCancel="True"
-                IsDefault="True"
                 Style="{StaticResource MaterialDesignIconButton}"
                 ToolTip="Back">
                 <materialDesign:PackIcon Kind="ArrowLeft" />
@@ -66,7 +65,7 @@
                 Width="530"
                 Height="105"
                 Source="/Images/Settings/Logo.png" />
-            
+
             <!--<TextBlock
                 Grid.Row="0"
                 HorizontalAlignment="Center"
@@ -75,7 +74,7 @@
                 Foreground="Green">
                 SETTINGS
             </TextBlock>-->
-            
+
             <Image
                 Grid.Row="1"
                 Width="200"
@@ -125,7 +124,7 @@
                     Width="210"
                     Height="32"
                     materialDesign:ButtonAssist.CornerRadius="5"
-                    Click="OwnSettings_Click"
+                    Click="OwnSettingsButton_Click"
                     Foreground="Black"
                     MouseEnter="OwnSettings_Button_MouseEnter"
                     MouseLeave="OwnSettings_Button_MouseLeave"
@@ -138,7 +137,7 @@
                     Width="210"
                     Height="32"
                     materialDesign:ButtonAssist.CornerRadius="5"
-                    Click="MusicSettings_Click"
+                    Click="MusicSettingsButton_Click"
                     Foreground="Black"
                     MouseEnter="MusicSettings_Button_MouseEnter"
                     MouseLeave="MusicSettings_Button_MouseLeave"

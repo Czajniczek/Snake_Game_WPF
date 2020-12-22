@@ -22,7 +22,6 @@ namespace Snake.Windows
         }
 
         #region MOUSE ENTER/LEAVE BUTTONS
-
         private void Yes_Button_MouseEnter(object sender, MouseEventArgs e)
         {
             Yes_Label.Visibility = Visibility.Collapsed;
@@ -46,11 +45,9 @@ namespace Snake.Windows
             No_Image.Visibility = Visibility.Collapsed;
             No_Label.Visibility = Visibility.Visible;
         }
-
         #endregion MOUSE ENTER/LEAVE BUTTONS
 
         #region BUTTONS CLICKS
-
         private void YesButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
@@ -60,7 +57,6 @@ namespace Snake.Windows
         {
             Close();
         }
-
         #endregion BUTTONS CLICKS
     }
 }

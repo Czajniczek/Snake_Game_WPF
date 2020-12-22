@@ -13,6 +13,6 @@
     <Image
         Width="20"
         Height="20"
-        gif:ImageBehavior.AnimatedSource="/Images/Game/SpecialFruit/source.gif" />
+        gif:ImageBehavior.AnimatedSource="/Images/Game/SpecialFruit/Watermelon.gif" />
 
 </UserControl>

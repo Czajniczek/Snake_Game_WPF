@@ -68,15 +68,6 @@
                 Height="105"
                 Source="/Images/Settings/Music/Logo.png" />
 
-            <!--<TextBlock
-                Grid.Row="0"
-                HorizontalAlignment="Center"
-                FontSize="80"
-                FontWeight="ExtraBold"
-                Foreground="Green">
-                MUSIC
-            </TextBlock>-->
-
             <Image
                 Grid.Row="1"
                 Width="150"
@@ -127,7 +118,6 @@
                         materialDesign:ButtonAssist.CornerRadius="5"
                         Click="SnakeSongButton_Click"
                         Foreground="Black"
-                        IsDefault="True"
                         MouseEnter="SnakeSong_Button_MouseEnter"
                         MouseLeave="SnakeSong_Button_MouseLeave"
                         Style="{StaticResource MaterialDesignRaisedButton}">
@@ -162,7 +152,6 @@
                         materialDesign:ButtonAssist.CornerRadius="5"
                         Click="BennySongButton_Click"
                         Foreground="Black"
-                        IsDefault="True"
                         MouseEnter="BennySong_Button_MouseEnter"
                         MouseLeave="BennySong_Button_MouseLeave"
                         Style="{StaticResource MaterialDesignRaisedButton}">

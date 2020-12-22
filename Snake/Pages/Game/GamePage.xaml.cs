@@ -21,21 +21,32 @@ namespace Snake.Pages.Game
 {
     public partial class GamePage : Page
     {
+        #region VARIABLES AND OBJECTS
         private readonly GameMenu gameMenu;
 
-        private DispatcherTimer gameDispatcherTimer;
+        private readonly DispatcherTimer gameDispatcherTimer;
         private List<Rectangle> snake;
         private NormalFruit normalFruit;
-        private DispatcherTimer specialFruitDispatcherTimer;
+
+        #region SPECIAL FRUIT
+        SpecialFruit specialFruit;
+        private readonly DispatcherTimer specialFruitDispatcherTimer;
         private List<SpecialFruit> specialFruits;
-        private Key LastKey = Key.Right;
+        #endregion
+
         private readonly Random rand = new Random();
         private int scoreFactor = 0;
         private int score = 0;
+        private int gameDelayMiliseconds = 500;
+        private int specialFruitDelaySeconds = 1;
+        private int X, Y;
+
+        private Key LastKey = Key.Right;
         private bool Top = false;
         private bool Right = true;
         private bool Bottom = false;
         private bool Left = false;
+        #endregion
 
         public GamePage(GameMenu gameMenu)
         {
@@ -45,14 +56,10 @@ namespace Snake.Pages.Game
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.KeyDown += SnakeMove;
             //NAJWIĘKSZY PRIORYTET
-            gameDispatcherTimer = new DispatcherTimer(DispatcherPriority.Send);
+            gameDispatcherTimer = new DispatcherTimer(DispatcherPriority.Render);
             specialFruitDispatcherTimer = new DispatcherTimer();
             //gameDispatcherTimer = new DispatcherTimer();
             SetInformations();
-            gameDispatcherTimer.Tick += Game;
-            specialFruitDispatcherTimer.Tick += GenerateSpecialFruit;
-            gameDispatcherTimer.Start();
-            specialFruitDispatcherTimer.Start();
 
             specialFruits = new List<SpecialFruit>();
         }
@@ -79,13 +86,18 @@ namespace Snake.Pages.Game
 
             snake.Add(rectangle);
             AddNewFruit();
+
+            gameDispatcherTimer.Tick += Game;
+            specialFruitDispatcherTimer.Tick += GenerateSpecialFruit;
+            gameDispatcherTimer.Start();
+            specialFruitDispatcherTimer.Start();
         }
 
         private void AddNewFruit()
         {
             normalFruit = new NormalFruit();
 
-            int X, Y;
+            //int X, Y;
 
             do
             {
@@ -96,42 +108,6 @@ namespace Snake.Pages.Game
             Playground.Children.Add(normalFruit);
             normalFruit.SetValue(Canvas.TopProperty, (double)(Y * 20));
             normalFruit.SetValue(Canvas.LeftProperty, (double)(X * 20));
-        }
-
-        private void GenerateSpecialFruit(object sender, EventArgs e)
-        {
-            SpecialFruit fruit = new SpecialFruit();
-
-            int X, Y;
-
-            do
-            {
-                X = rand.Next(0, 32);
-                Y = rand.Next(0, 22);
-            } while (SpecialFruitCanCreate(X, Y));
-
-            Playground.Children.Add(fruit);
-            specialFruits.Add(fruit);
-            fruit.SetValue(Canvas.TopProperty, (double)(Y * 20));
-            fruit.SetValue(Canvas.LeftProperty, (double)(X * 20));
-        }
-
-        private bool SpecialFruitCanCreate(int X, int Y)
-        {
-            bool insnake = snake.Any(x =>
-            {
-                double elemX = (double)x.GetValue(Canvas.LeftProperty);
-                double elemY = (double)x.GetValue(Canvas.TopProperty);
-
-                if (X == elemX && Y == elemY)
-                    return true;
-                return false;
-            });
-
-            double fruitX = (double)normalFruit.GetValue(Canvas.LeftProperty);
-            double fruitY = (double)normalFruit.GetValue(Canvas.TopProperty);
-
-            return insnake && fruitX != X && fruitY != Y;
         }
 
         private bool FruitCanCreate(int X, int Y)
@@ -155,9 +131,43 @@ namespace Snake.Pages.Game
             });
         }
 
+        private void GenerateSpecialFruit(object sender, EventArgs e)
+        {
+            specialFruit = new SpecialFruit();
+
+            //int X, Y;
+
+            do
+            {
+                X = rand.Next(0, 32);
+                Y = rand.Next(0, 22);
+            } while (SpecialFruitCanCreate(X, Y));
+
+            Playground.Children.Add(specialFruit);
+            specialFruits.Add(specialFruit);
+            specialFruit.SetValue(Canvas.TopProperty, (double)(Y * 20));
+            specialFruit.SetValue(Canvas.LeftProperty, (double)(X * 20));
+        }
+
+        private bool SpecialFruitCanCreate(int X, int Y)
+        {
+            bool insnake = snake.Any(x =>
+            {
+                double elemX = (double)x.GetValue(Canvas.LeftProperty);
+                double elemY = (double)x.GetValue(Canvas.TopProperty);
+
+                if (X == elemX && Y == elemY) return true;
+                return false;
+            });
+
+            double fruitX = (double)normalFruit.GetValue(Canvas.LeftProperty);
+            double fruitY = (double)normalFruit.GetValue(Canvas.TopProperty);
+
+            return insnake && fruitX != X && fruitY != Y;
+        }
+
         private void Game(object sender, EventArgs e)
         {
-
             for (int i = snake.Count - 1; i > 0; i--)
             {
                 double x = (double)snake[i - 1].GetValue(Canvas.LeftProperty);
@@ -174,11 +184,11 @@ namespace Snake.Pages.Game
             {
                 case Key.Left:
                     X -= 20;
-                    if (X < 0)
+                    if (X < 0 || TailHitted(X, Y))
                     {
                         specialFruitDispatcherTimer.Stop();
                         gameDispatcherTimer.Stop();
-                        NavigationService.Navigate(new GameOverPage(gameMenu: gameMenu));
+                        NavigationService.Navigate(new GameOverPage(gameMenu: gameMenu, score: score));
                     }
                     else
                     {
@@ -189,11 +199,11 @@ namespace Snake.Pages.Game
 
                 case Key.Right:
                     X += 20;
-                    if (X >= 640)
+                    if (X >= 640 || TailHitted(X, Y))
                     {
                         specialFruitDispatcherTimer.Stop();
                         gameDispatcherTimer.Stop();
-                        NavigationService.Navigate(new GameOverPage(gameMenu: gameMenu));
+                        NavigationService.Navigate(new GameOverPage(gameMenu: gameMenu, score: score));
                     }
                     else
                     {
@@ -204,11 +214,11 @@ namespace Snake.Pages.Game
 
                 case Key.Up:
                     Y -= 20;
-                    if (Y < 0)
+                    if (Y < 0 || TailHitted(X, Y))
                     {
                         specialFruitDispatcherTimer.Stop();
                         gameDispatcherTimer.Stop();
-                        NavigationService.Navigate(new GameOverPage(gameMenu: gameMenu));
+                        NavigationService.Navigate(new GameOverPage(gameMenu: gameMenu, score: score));
                     }
                     else
                     {
@@ -219,11 +229,11 @@ namespace Snake.Pages.Game
 
                 case Key.Down:
                     Y += 20;
-                    if (Y >= 440)
+                    if (Y >= 440 || TailHitted(X, Y))
                     {
                         specialFruitDispatcherTimer.Stop();
                         gameDispatcherTimer.Stop();
-                        NavigationService.Navigate(new GameOverPage(gameMenu: gameMenu));
+                        NavigationService.Navigate(new GameOverPage(gameMenu: gameMenu, score: score));
                     }
                     else
                     {
@@ -231,7 +241,6 @@ namespace Snake.Pages.Game
                         snake[0].SetValue(Canvas.LeftProperty, X);
                     }
                     break;
-
 
                 default:
                     break;
@@ -242,28 +251,59 @@ namespace Snake.Pages.Game
                 double elemX = (double)x.GetValue(Canvas.LeftProperty);
                 double elemY = (double)x.GetValue(Canvas.TopProperty);
 
-                if (X == elemX && Y == elemY)
-                    return true;
+                if (X == elemX && Y == elemY) return true;
                 return false;
-
             });
 
-            if (fruit is NormalFruit f)
+            if (fruit is NormalFruit normal)
             {
+                AddSnakeElem();
+                Playground.Children.Remove(normal);
+                AddNewFruit();
                 score += scoreFactor;
                 Points_TextBlock.Text = score.ToString();
-                Playground.Children.Remove(f);
-                AddSnakeElem();
-                AddNewFruit();
+
+                if (!gameMenu.OwnSettings)
+                {
+                    if (gameDelayMiliseconds > 50)
+                    {
+                        gameDelayMiliseconds -= 10;
+                        gameDispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, gameDelayMiliseconds);
+                    }
+                }
             }
             else if (fruit is SpecialFruit special)
             {
+                AddSnakeElem();
+                AddSnakeElem();
+                Playground.Children.Remove(special);
                 score += 50;
                 Points_TextBlock.Text = score.ToString();
-                Playground.Children.Remove(special);
-                AddSnakeElem();
                 specialFruits.Remove(special);
+
+                if (!gameMenu.OwnSettings)
+                {
+                    if (gameDelayMiliseconds > 50)
+                    {
+                        gameDelayMiliseconds -= 20;
+                        gameDispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, gameDelayMiliseconds);
+                    }
+                }
             }
+        }
+
+        private bool TailHitted(double X, double Y)
+        {
+            for (int i = 1; i < snake.Count; i++)
+            {
+                if (X == (double)snake[i].GetValue(Canvas.LeftProperty) &&
+                    Y == (double)snake[i].GetValue(Canvas.TopProperty))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         private void AddSnakeElem()
@@ -291,11 +331,11 @@ namespace Snake.Pages.Game
                 case Key.Left:
                     if (!Right || Left)
                     {
+                        LastKey = Key.Left;
                         Left = true;
                         Right = false;
                         Top = false;
                         Bottom = false;
-                        LastKey = Key.Left;
                     }
                     break;
 
@@ -324,11 +364,11 @@ namespace Snake.Pages.Game
                 case Key.Down:
                     if (!Top || Bottom)
                     {
-                                            Bottom = true;
-                    Top = false;
-                    Left = false;
-                    Right = false;
                         LastKey = Key.Down;
+                        Bottom = true;
+                        Top = false;
+                        Left = false;
+                        Right = false;
                     }
                     break;
             }
@@ -343,15 +383,18 @@ namespace Snake.Pages.Game
                 switch (gameMenu.BonusFruit)
                 {
                     case Enums.BonusFruitFrequencyEnum.Rarely:
-                        specialFruitDispatcherTimer.Interval = TimeSpan.FromSeconds(8);
+                        specialFruitDelaySeconds = 8;
+                        specialFruitDispatcherTimer.Interval = TimeSpan.FromSeconds(specialFruitDelaySeconds);
                         break;
 
                     case Enums.BonusFruitFrequencyEnum.Normally:
-                        specialFruitDispatcherTimer.Interval = TimeSpan.FromSeconds(5);
+                        specialFruitDelaySeconds = 5;
+                        specialFruitDispatcherTimer.Interval = TimeSpan.FromSeconds(specialFruitDelaySeconds);
                         break;
 
                     case Enums.BonusFruitFrequencyEnum.Often:
-                        specialFruitDispatcherTimer.Interval = TimeSpan.FromSeconds(1);
+                        specialFruitDelaySeconds = 3;
+                        specialFruitDispatcherTimer.Interval = TimeSpan.FromSeconds(specialFruitDelaySeconds);
                         break;
 
                     default:
@@ -362,17 +405,20 @@ namespace Snake.Pages.Game
                 {
                     case Enums.SnakeSpeedEnum.Slow:
                         scoreFactor = 5;
-                        gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(500);
+                        gameDelayMiliseconds = 500;
+                        gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(gameDelayMiliseconds);
                         break;
 
                     case Enums.SnakeSpeedEnum.Medium:
                         scoreFactor = 10;
-                        gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(250);
+                        gameDelayMiliseconds = 250;
+                        gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(gameDelayMiliseconds);
                         break;
 
                     case Enums.SnakeSpeedEnum.Fast:
                         scoreFactor = 30;
-                        gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(50);
+                        gameDelayMiliseconds = 50;
+                        gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(gameDelayMiliseconds);
                         break;
 
                     default:
@@ -386,25 +432,31 @@ namespace Snake.Pages.Game
                     case Enums.LevelEnum.Easy:
                         DifficultyLevel_TextBlock.Text = "EASY";
                         scoreFactor = 5;
+                        gameDelayMiliseconds = 500;
+                        specialFruitDelaySeconds = 3;
                         DifficultyLevel_TextBlock.Foreground = new SolidColorBrush(Color.FromRgb(0, 128, 0));
-                        gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(500);
-                        specialFruitDispatcherTimer.Interval = TimeSpan.FromSeconds(3);
+                        gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(gameDelayMiliseconds);
+                        specialFruitDispatcherTimer.Interval = TimeSpan.FromSeconds(specialFruitDelaySeconds);
 
                         break;
                     case Enums.LevelEnum.Medium:
                         DifficultyLevel_TextBlock.Text = "MEDIUM";
                         scoreFactor = 10;
+                        gameDelayMiliseconds = 250;
+                        specialFruitDelaySeconds = 5;
                         DifficultyLevel_TextBlock.Foreground = new SolidColorBrush(Color.FromRgb(230, 215, 0));
-                        gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(250);
-                        specialFruitDispatcherTimer.Interval = TimeSpan.FromSeconds(5);
+                        gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(gameDelayMiliseconds);
+                        specialFruitDispatcherTimer.Interval = TimeSpan.FromSeconds(specialFruitDelaySeconds);
                         break;
 
                     case Enums.LevelEnum.Hard:
                         DifficultyLevel_TextBlock.Text = "HARD";
                         scoreFactor = 20;
+                        gameDelayMiliseconds = 100;
+                        specialFruitDelaySeconds = 8;
                         DifficultyLevel_TextBlock.Foreground = new SolidColorBrush(Color.FromRgb(153, 0, 0));
-                        gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(100);
-                        specialFruitDispatcherTimer.Interval = TimeSpan.FromSeconds(8);
+                        gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(gameDelayMiliseconds);
+                        specialFruitDispatcherTimer.Interval = TimeSpan.FromSeconds(specialFruitDelaySeconds);
                         break;
 
                     default:

@@ -42,6 +42,7 @@ namespace Snake.Pages
             else Music_Icon.Kind = PackIconKind.Music;
         }
 
+        #region SET INFORMATIONS
         private void SetLevel()
         {
             switch (gameMenu.Level)
@@ -83,6 +84,7 @@ namespace Snake.Pages
             Left_Image.Source = bitmapImage;
             Right_Image.Source = bitmapImage;
         }
+        #endregion
 
         #region MOUSE ENTER/LEAVE BUTTONS
         private void Music_Button_MouseEnter(object sender, MouseEventArgs e)
@@ -96,12 +98,6 @@ namespace Snake.Pages
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new SettingsPage(gameMenu: gameMenu));
-        }
-
-        private void ExitButton_Click(object sender, RoutedEventArgs e)
-        {
-            ExitWindow exitWindow = new ExitWindow { Owner = Window.GetWindow(this) };
-            exitWindow.ShowDialog();
         }
 
         private void MusicButton_Click(object sender, RoutedEventArgs e)
@@ -118,6 +114,12 @@ namespace Snake.Pages
                 gameMenu.PlayMusic();
                 gameMenu.MusicOn = true;
             }
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            ExitWindow exitWindow = new ExitWindow { Owner = Window.GetWindow(this) };
+            exitWindow.ShowDialog();
         }
 
         private void UpButton_Click(object sender, RoutedEventArgs e)

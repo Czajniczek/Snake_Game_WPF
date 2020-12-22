@@ -36,19 +36,9 @@
             ToolTip="Back">
             <materialDesign:PackIcon Kind="ArrowLeft" />
         </Button>
-        <Image
-            Grid.Row="0"
-            Height="105"
-            Source="/Images/Logo.png" />
-
-        <!--<TextBlock
-            Grid.Row="0"
-            HorizontalAlignment="Center"
-            FontSize="80"
-            FontWeight="ExtraBold"
-            Foreground="Green">
-            SNAKE
-        </TextBlock>-->
+        <Image Grid.Row="0"
+               Height="105"
+               Source="/Images/Logo.png" />
 
         <Button
             Name="Music_Button"

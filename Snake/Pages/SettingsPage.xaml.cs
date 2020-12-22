@@ -63,28 +63,6 @@ namespace Snake.Pages
             MouseLeaveButton(OwnSettings_Button);
         }
 
-        #region JAKIEŚ GÓWNO
-        //private void SnakeSpeed_Button_MouseEnter(object sender, MouseEventArgs e)
-        //{
-        //    MouseEnterButton(buttonName: SnakeSpeed_Button, path: "/Images/Settings/Speed.png");
-        //}
-
-        //private void SnakeSpeed_Button_MouseLeave(object sender, MouseEventArgs e)
-        //{
-        //    MouseLeaveButton(SnakeSpeed_Button);
-        //}
-
-        //private void BonusFruit_Button_MouseEnter(object sender, MouseEventArgs e)
-        //{
-        //    MouseEnterButton(buttonName: BonusFruit_Button, path: "/Images/Settings/BonusFruit.png");
-        //}
-
-        //private void BonusFruit_Button_MouseLeave(object sender, MouseEventArgs e)
-        //{
-        //    MouseLeaveButton(BonusFruit_Button);
-        //}
-        #endregion
-
         private void MusicSettings_Button_MouseEnter(object sender, MouseEventArgs e)
         {
             MouseEnterButton(buttonName: MusicSettings_Button, path: "/Images/Settings/Music.png");
@@ -172,24 +150,12 @@ namespace Snake.Pages
             NavigationService.Navigate(new DifficultyLevelPage(gameMenu: gameMenu));
         }
 
-        private void OwnSettings_Click(object sender, RoutedEventArgs e)
+        private void OwnSettingsButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new CustomizedSettingsPage(gameMenu: gameMenu));
         }
 
-        #region JAKIEŚ GÓWNO 2
-        //private void SnakeSpeedButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    NavigationService.Navigate(new SnakeSpeedPage(gameMenu: gameMenu));
-        //}
-
-        //private void BonusFruitButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    NavigationService.Navigate(new BonusFruitPage(gameMenu: gameMenu));
-        //}
-        #endregion
-
-        private void MusicSettings_Click(object sender, RoutedEventArgs e)
+        private void MusicSettingsButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new MusicPage(gameMenu: gameMenu));
         }

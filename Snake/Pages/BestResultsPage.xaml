@@ -16,6 +16,7 @@
     <Page.Resources>
         <converters:PlaceImageConverter x:Key="ImageConverter" />
     </Page.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />

@@ -37,6 +37,7 @@ namespace Snake.Pages
             else Music_Icon.Kind = PackIconKind.Music;
         }
 
+        #region SET INFORMATIONS
         private void SetMusic()
         {
             if (gameMenu.MusicOn)
@@ -63,6 +64,7 @@ namespace Snake.Pages
             imageName2.Visibility = Visibility.Visible;
             buttonName.IsEnabled = false;
         }
+        #endregion
 
         #region MOUSE ENTER/LEAVE BUTTONS
         private void Music_Button_MouseEnter(object sender, MouseEventArgs e)
@@ -163,7 +165,8 @@ namespace Snake.Pages
                 RightSnakeSong_Gif
             };
 
-            ChangeButtonStyleAccordingToMusic(hideGifsList: hideGifsList, showGifsList: showGifsList, enabledButton: BennySong_Button, disabledButton: SnakeSong_Button);
+            ChangeButtonStyleAccordingToMusic(hideGifsList: hideGifsList, showGifsList: showGifsList,
+                enabledButton: BennySong_Button, disabledButton: SnakeSong_Button);
             gameMenu.MusicPath = "Music/Snake_Song.wav";
             gameMenu.PlayMusic();
         }
@@ -182,12 +185,14 @@ namespace Snake.Pages
                 RightBennyHillSong_Gif
             };
 
-            ChangeButtonStyleAccordingToMusic(hideGifsList: hideGifsList, showGifsList: showGifsList, enabledButton: SnakeSong_Button, disabledButton: BennySong_Button);
+            ChangeButtonStyleAccordingToMusic(hideGifsList: hideGifsList, showGifsList: showGifsList,
+                enabledButton: SnakeSong_Button, disabledButton: BennySong_Button);
             gameMenu.MusicPath = "Music/Benny_Hill_Yakety_Sax.wav";
             gameMenu.PlayMusic();
         }
 
-        private void ChangeButtonStyleAccordingToMusic(List<Image> hideGifsList, List<Image> showGifsList, Button enabledButton, Button disabledButton)
+        private void ChangeButtonStyleAccordingToMusic(List<Image> hideGifsList, List<Image> showGifsList,
+            Button enabledButton, Button disabledButton)
         {
             foreach (var gif in hideGifsList) gif.Visibility = Visibility.Hidden;
 
