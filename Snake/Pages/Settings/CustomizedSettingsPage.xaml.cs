@@ -42,6 +42,7 @@ namespace Snake.Pages.Settings
             else Music_Icon.Kind = PackIconKind.Music;
         }
 
+        #region SET INFORMATIONS
         private void SetBonusFruitFrequency()
         {
             switch (gameMenu.BonusFruit)
@@ -69,6 +70,16 @@ namespace Snake.Pages.Settings
                 default:
                     break;
             }
+        }
+
+        private void SetImage(Image imageName1, Image imageName2, string path)
+        {
+            BitmapImage bitmapImage = new BitmapImage();
+            bitmapImage.BeginInit();
+            bitmapImage.UriSource = new Uri(@path, UriKind.Relative);
+            bitmapImage.EndInit();
+            imageName1.Source = bitmapImage;
+            imageName2.Source = bitmapImage;
         }
 
         private void SetSnakeSpeed()
@@ -102,16 +113,7 @@ namespace Snake.Pages.Settings
                     break;
             }
         }
-
-        private void SetImage(Image imageName1, Image imageName2, string path)
-        {
-            BitmapImage bitmapImage = new BitmapImage();
-            bitmapImage.BeginInit();
-            bitmapImage.UriSource = new Uri(@path, UriKind.Relative);
-            bitmapImage.EndInit();
-            imageName1.Source = bitmapImage;
-            imageName2.Source = bitmapImage;
-        }
+        #endregion
 
         #region MOUSE ENTER/LEAVE BUTTONS
         private void Music_Button_MouseEnter(object sender, MouseEventArgs e)
@@ -125,12 +127,6 @@ namespace Snake.Pages.Settings
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new SettingsPage(gameMenu: gameMenu));
-        }
-
-        private void ExitButton_Click(object sender, RoutedEventArgs e)
-        {
-            ExitWindow exitWindow = new ExitWindow { Owner = Window.GetWindow(this) };
-            exitWindow.ShowDialog();
         }
 
         private void MusicButton_Click(object sender, RoutedEventArgs e)
@@ -147,6 +143,12 @@ namespace Snake.Pages.Settings
                 gameMenu.PlayMusic();
                 gameMenu.MusicOn = true;
             }
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            ExitWindow exitWindow = new ExitWindow { Owner = Window.GetWindow(this) };
+            exitWindow.ShowDialog();
         }
 
         private void LeftBonusFruitButton_Click(object sender, RoutedEventArgs e)

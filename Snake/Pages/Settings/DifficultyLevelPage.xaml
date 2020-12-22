@@ -70,24 +70,6 @@
                 Height="150"
                 Source="/Images/Settings/DifficultyLevel/Logo.png" />
 
-            <!--<TextBlock
-                Grid.Row="0"
-                HorizontalAlignment="Center"
-                FontSize="60"
-                FontWeight="ExtraBold"
-                Foreground="Green">
-                DIFFICULTY
-            </TextBlock>
-            <TextBlock
-                Grid.Row="0"
-                Margin="0,50,0,0"
-                HorizontalAlignment="Center"
-                FontSize="60"
-                FontWeight="ExtraBold"
-                Foreground="Green">
-                LEVEL
-            </TextBlock>-->
-
             <Image
                 Grid.Row="1"
                 Width="150"

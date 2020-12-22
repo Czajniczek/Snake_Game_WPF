@@ -29,7 +29,7 @@ namespace Snake.Pages
             this.gameMenu = gameMenu;
         }
 
-        private void BeforeStartPage_Loaded(object sender, RoutedEventArgs e)
+        private void EnterNicknamePage_Loaded(object sender, RoutedEventArgs e)
         {
             //gameMenu.Nickname = "Gabrielos";
             Nickname_WrapPanel.DataContext = gameMenu;
@@ -39,6 +39,7 @@ namespace Snake.Pages
             else Music_Icon.Kind = PackIconKind.Music;
         }
 
+        #region NICKNAME VALIDATION
         private void Nickname_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (gameMenu.Nickname == null || gameMenu.Nickname.Length == 0)
@@ -59,6 +60,7 @@ namespace Snake.Pages
                 StartGame_Button.IsEnabled = true;
             }
         }
+        #endregion
 
         #region MOUSE ENTER/LEAVE BUTTONS
         private void Music_Button_MouseEnter(object sender, MouseEventArgs e)

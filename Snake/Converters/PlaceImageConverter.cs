@@ -14,18 +14,9 @@ namespace Snake.Converters
         {
             string place = (string)value;
 
-            if (place == "01")
-            {
-                return "/Images/BestResults/1stPlace.png";
-            }
-            else if (place == "02")
-            {
-                return "/Images/BestResults/2ndPlace.png";
-            }
-            else if (place == "03")
-            {
-                return "/Images/BestResults/3rdPlace.png";
-            }
+            if (place == "01") return "/Images/BestResults/1stPlace.png";
+            else if (place == "02") return "/Images/BestResults/2ndPlace.png";
+            else if (place == "03") return "/Images/BestResults/3rdPlace.png";
             else return null;
         }
 

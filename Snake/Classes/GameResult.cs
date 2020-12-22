@@ -17,7 +17,8 @@ namespace Snake
 
         public GameResult() { }
 
-        public GameResult(string ImagePath, string Place, string Score, string Nickname, string DifficultyLevel, string Date)
+        public GameResult(string ImagePath, string Place, string Score, string Nickname,
+            string DifficultyLevel, string Date)
         {
             this.ImagePath = ImagePath;
             this.Place = Place;

@@ -41,6 +41,7 @@ namespace Snake.Pages
             dispatcherTimer.Start();
         }
 
+        #region COUNTDOWN
         private void DispatcherTimerTick(object sender, EventArgs e)
         {
             counter++;
@@ -83,5 +84,6 @@ namespace Snake.Pages
 
             CountdownToStartGame_Image.Source = bitmapImage;
         }
+        #endregion
     }
 }

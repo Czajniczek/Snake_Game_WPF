@@ -10,8 +10,9 @@ namespace Snake.Classes
 {
     public class GameMenu
     {
-        #region DIFFICULTY LEVEL
+        #region GAME
         public LevelEnum Level { get; set; }
+        public string Nickname { get; set; }
         #endregion
 
         #region OWN SETTINGS
@@ -22,20 +23,14 @@ namespace Snake.Classes
 
         #region MUSIC
         private SoundPlayer SoundPlayer;
-
-        //public string LastPath { get; set; }
         public string MusicPath { get; set; }
         public bool MusicOn { get; set; }
         #endregion
 
-        #region GAME
-        public string Nickname { get; set; }
-        #endregion
-
         public GameMenu() { }
 
-        public GameMenu(LevelEnum Level, bool OwnSettings, SnakeSpeedEnum SnakeSpeed, BonusFruitFrequencyEnum BonusFruit,
-            string MusicPath, bool MusicOn)
+        public GameMenu(LevelEnum Level, bool OwnSettings, SnakeSpeedEnum SnakeSpeed,
+            BonusFruitFrequencyEnum BonusFruit, string MusicPath, bool MusicOn)
         {
             this.Level = Level;
             this.OwnSettings = OwnSettings;

@@ -147,34 +147,6 @@ namespace Snake.Pages
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new SettingsPage(gameMenu: gameMenu));
-
-            #region SETTINGS
-            #region GAMEPLAY
-            #region DIFFICULTY LEVEL
-            //EASY
-            //MEDIUM
-            //HARD
-            #endregion DIFFICULTY LEVEL
-            #region OWN SETTING
-            #region SNAKE SPEED
-            //SLOW
-            //NORMAL
-            //FAST
-            //VERY FAST
-            #endregion SNAKE SPEED
-            #region BONUS FRUIT
-            //RARELY
-            //NORMALLY
-            //OFTEN
-            //VERY OFTEN
-            #endregion BONUS FRUIT
-            #endregion OWN SETTINGS
-            #endregion GAMEPLAY
-            #region MUSIC
-            //CHANGE
-            //TURN ON/OFF
-            #endregion MUSIC
-            #endregion SETTINGS
         }
 
         private void AuthorButton_Click(object sender, RoutedEventArgs e)

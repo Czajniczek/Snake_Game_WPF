@@ -302,7 +302,14 @@
     <Resource Include="Images\Game\CountdownToStartGame\Start1.png" />
     <Resource Include="Images\Game\EnterNickname\Logo.png" />
     <Resource Include="Images\Game\NormalFruit\Apple.png" />
-    <Resource Include="Images\Game\SpecialFruit\source.gif" />
+    <Resource Include="Images\Game\SpecialFruit\Orange.gif" />
+    <Resource Include="Images\Game\GameOver\Logo.png" />
+    <Resource Include="Images\Game\SpecialFruit\Strawberry.gif" />
+    <Resource Include="Images\Game\SpecialFruit\Avocado.gif" />
+    <Resource Include="Images\Game\SpecialFruit\Orange2.gif" />
+    <Resource Include="Images\Game\SpecialFruit\Pineapple.gif" />
+    <Resource Include="Images\Game\SpecialFruit\Orange3.gif" />
+    <Resource Include="Images\Game\SpecialFruit\Watermelon.gif" />
     <Content Include="Music\Benny_Hill_Yakety_Sax.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
