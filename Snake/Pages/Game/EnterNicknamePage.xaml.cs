@@ -31,7 +31,7 @@ namespace Snake.Pages
 
         private void BeforeStartPage_Loaded(object sender, RoutedEventArgs e)
         {
-            //gameMenu.nickname = "Gabrielos";
+            //gameMenu.Nickname = "Gabrielos";
             Nickname_WrapPanel.DataContext = gameMenu;
             Nickname_Text_Box.Focus();
 
@@ -41,13 +41,13 @@ namespace Snake.Pages
 
         private void Nickname_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (gameMenu.nickname == null || gameMenu.nickname.Length == 0)
+            if (gameMenu.Nickname == null || gameMenu.Nickname.Length == 0)
             {
                 Validation_TextBlock.Text = "Nickname can not be empty!";
                 Validation_TextBlock.Visibility = Visibility.Visible;
                 StartGame_Button.IsEnabled = false;
             }
-            else if (gameMenu.nickname.Length < 3)
+            else if (gameMenu.Nickname.Length < 3)
             {
                 Validation_TextBlock.Text = "The nickname must consist of at least 3 characters";
                 Validation_TextBlock.Visibility = Visibility.Visible;

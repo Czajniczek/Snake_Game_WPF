@@ -108,7 +108,7 @@
                     Background="Transparent"
                     FontSize="20"
                     MaxLength="12"
-                    Text="{Binding Path=nickname, UpdateSourceTrigger=PropertyChanged}"
+                    Text="{Binding Path=Nickname, UpdateSourceTrigger=PropertyChanged}"
                     TextChanged="Nickname_TextChanged" />
             </WrapPanel>
             <TextBlock

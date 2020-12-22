@@ -29,7 +29,7 @@ namespace Snake.Classes
         #endregion
 
         #region GAME
-        public string nickname { get; set; }
+        public string Nickname { get; set; }
         #endregion
 
         public GameMenu() { }
