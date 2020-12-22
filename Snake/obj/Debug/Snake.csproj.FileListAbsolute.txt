@@ -221,3 +221,9 @@ C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\CountdownToStartGam
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\EnterNicknamePage.g.cs
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\EnterNicknamePage.baml
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\GamePage.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\GamePage.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\UserControls\NormalFruit.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\UserControls\NormalFruit.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\GameOverPage.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\GameOverPage.baml

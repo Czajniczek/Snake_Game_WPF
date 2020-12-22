@@ -1,4 +1,5 @@
 ﻿using Snake.Classes;
+using Snake.Pages.Game;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,7 +48,7 @@ namespace Snake.Pages
             if (counter == 5)
             {
                 dispatcherTimer.Stop();
-
+                NavigationService.Navigate(new GamePage(gameMenu: gameMenu));
             }
             else
             {
