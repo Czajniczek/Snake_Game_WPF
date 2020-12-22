@@ -227,3 +227,5 @@ C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\UserControls\NormalFruit.g.cs
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\UserControls\NormalFruit.baml
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\GameOverPage.g.cs
 C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\GameOverPage.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\UserControls\SpecialFruit.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\UserControls\SpecialFruit.baml
