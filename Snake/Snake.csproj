@@ -123,6 +123,9 @@
     <Compile Include="UserControls\NormalFruit.xaml.cs">
       <DependentUpon>NormalFruit.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\SpecialFruit.xaml.cs">
+      <DependentUpon>SpecialFruit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ExitWindow.xaml.cs">
       <DependentUpon>ExitWindow.xaml</DependentUpon>
     </Compile>
@@ -191,6 +194,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\NormalFruit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SpecialFruit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -294,6 +301,8 @@
     <Resource Include="Images\Game\CountdownToStartGame\3.png" />
     <Resource Include="Images\Game\CountdownToStartGame\Start1.png" />
     <Resource Include="Images\Game\EnterNickname\Logo.png" />
+    <Resource Include="Images\Game\NormalFruit\Apple.png" />
+    <Resource Include="Images\Game\SpecialFruit\source.gif" />
     <Content Include="Music\Benny_Hill_Yakety_Sax.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
