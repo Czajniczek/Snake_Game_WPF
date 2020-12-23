@@ -99,7 +99,6 @@ namespace Snake.Pages
             //resultsList.Reverse();
 
             //BEST 10 SCORES
-            //for (int i = 7; i < resultsList.Count; i++) resultsList.RemoveAt(i);
             resultsList = resultsList.Take(10).ToList();
 
             int counter = 1;
@@ -110,27 +109,6 @@ namespace Snake.Pages
                 else person.Place = counter.ToString();
                 counter++;
             }
-
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    switch (i)
-            //    {
-            //        case 0:
-            //            resultsList[i].ImagePath = "/Images/BestResults/1stPlace.png";
-            //            break;
-
-            //        case 1:
-            //            resultsList[i].ImagePath = "/Images/BestResults/2ndPlace.png";
-            //            break;
-
-            //        case 2:
-            //            resultsList[i].ImagePath = "/Images/BestResults/3rdPlace.png";
-            //            break;
-
-            //        default:
-            //            break;
-            //    }
-            //}
 
             return resultsList;
         }

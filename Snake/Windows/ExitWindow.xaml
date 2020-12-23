@@ -16,10 +16,12 @@
     mc:Ignorable="d">
 
     <Border
-        Background="White"
         BorderBrush="Black"
         BorderThickness="2"
         CornerRadius="40">
+        <Border.Background>
+            <ImageBrush ImageSource="/Images/Menu/Background.png" />
+        </Border.Background>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto" />
