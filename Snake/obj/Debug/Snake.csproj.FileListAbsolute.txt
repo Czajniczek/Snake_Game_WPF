@@ -1,0 +1,231 @@
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\bin\Debug\Snake.exe.config
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\bin\Debug\Snake.exe
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\bin\Debug\Snake.pdb
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Snake.csprojAssemblyReference.cache
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\MainWindow.g.cs
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\App.g.cs
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Snake_MarkupCompile.cache
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Snake_MarkupCompile.lref
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\MainWindow.baml
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Snake.g.resources
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Snake.Properties.Resources.resources
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Snake.csproj.GenerateResource.cache
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Snake.exe
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Snake.pdb
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Pages\MenuPage.g.cs
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Pages\MenuPage.baml
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Pages\NewGamePage.g.cs
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Pages\NewGamePage.baml
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\bin\Debug\MaterialDesignColors.dll
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\bin\Debug\MaterialDesignColors.pdb
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\App.baml
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Snake.csproj.CopyComplete
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Windows\ExitWindow.g.cs
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Windows\ExitWindow.baml
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Pages\AuthorPage.g.cs
+C:\Studia\Moje\Semestr V\Komunikacja człowiek - komputer\Snake\Snake\Snake\obj\Debug\Pages\AuthorPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\bin\Debug\Snake.exe.config
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\bin\Debug\Snake.exe
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\bin\Debug\Snake.pdb
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\bin\Debug\MaterialDesignColors.dll
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\bin\Debug\MaterialDesignColors.pdb
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Snake.csprojAssemblyReference.cache
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\AuthorPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\MenuPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\NewGamePage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Windows\ExitWindow.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\App.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Snake_MarkupCompile.cache
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Snake_MarkupCompile.lref
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\App.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\AuthorPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\MenuPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\NewGamePage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Windows\ExitWindow.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Snake.g.resources
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Snake.Properties.Resources.resources
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Snake.csproj.GenerateResource.cache
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Snake.csproj.CopyComplete
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Snake.exe
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Snake.pdb
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\MainWindow.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\MainWindow.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\SettingsPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\SettingsPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\BestResultsPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\BestResultsPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Snake_Content.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\bin\Debug\Music\Snake_song.wav
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Images\Author\Czajkowski.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Images\Author\Gabriel.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\Settings\DifficultyLevelPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\Settings\MusicPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\Settings\DifficultyLevelPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\Settings\MusicPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\Settings\BonusFruitPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\Settings\SnakeSpeedPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\Settings\BonusFruitPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\Snake\obj\Debug\Pages\Settings\SnakeSpeedPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\bin\Debug\Music\Benny_Hill_Yakety_Sax.wav
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\bin\Debug\Music\Snake_song.wav
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\bin\Debug\Snake.exe.config
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\bin\Debug\Snake.exe
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\bin\Debug\Snake.pdb
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\bin\Debug\MaterialDesignColors.dll
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\bin\Debug\MaterialDesignColors.pdb
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Snake.csprojAssemblyReference.cache
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Images\Author\Czajkowski.baml
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Images\Author\Gabriel.baml
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\MainWindow.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Pages\AuthorPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Pages\BestResultsPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Pages\Settings\CustomizedSettingsPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Pages\Settings\DifficultyLevelPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Pages\MenuPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Pages\Settings\MusicPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Pages\NewGamePage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Pages\SettingsPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Windows\ExitWindow.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\App.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Snake_Content.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Snake_MarkupCompile.cache
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Snake_MarkupCompile.lref
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\App.baml
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\MainWindow.baml
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Pages\AuthorPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Pages\BestResultsPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Pages\Settings\CustomizedSettingsPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Pages\Settings\DifficultyLevelPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Pages\MenuPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Pages\Settings\MusicPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Pages\NewGamePage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Pages\SettingsPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Windows\ExitWindow.baml
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Snake.g.resources
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Snake.Properties.Resources.resources
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Snake.csproj.GenerateResource.cache
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Snake.csproj.CopyComplete
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Snake.exe
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\obj\Debug\Snake.pdb
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\bin\Debug\WpfAnimatedGif.dll
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\bin\Debug\WpfAnimatedGif.pdb
+C:\Studia\Moje\Semestr V\KCK\Snake — kopia\Snake\Snake\bin\Debug\WpfAnimatedGif.xml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\bin\Debug\Music\Benny_Hill_Yakety_Sax.wav
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\bin\Debug\Music\Snake_song.wav
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\bin\Debug\Snake.exe.config
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\bin\Debug\Snake.exe
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\bin\Debug\Snake.pdb
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\bin\Debug\MaterialDesignColors.dll
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\bin\Debug\WpfAnimatedGif.dll
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\bin\Debug\MaterialDesignColors.pdb
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\bin\Debug\WpfAnimatedGif.pdb
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\bin\Debug\WpfAnimatedGif.xml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Snake.csprojAssemblyReference.cache
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Images\Author\Czajkowski.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Images\Author\Gabriel.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\MainWindow.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Pages\AuthorPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Pages\BestResultsPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Pages\Settings\CustomizedSettingsPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Pages\Settings\DifficultyLevelPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Pages\MenuPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Pages\Settings\MusicPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Pages\NewGamePage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Pages\SettingsPage.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Windows\ExitWindow.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\App.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Snake_Content.g.cs
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Snake_MarkupCompile.cache
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Snake_MarkupCompile.lref
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\App.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\MainWindow.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Pages\AuthorPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Pages\BestResultsPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Pages\Settings\CustomizedSettingsPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Pages\Settings\DifficultyLevelPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Pages\MenuPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Pages\Settings\MusicPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Pages\NewGamePage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Pages\SettingsPage.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Windows\ExitWindow.baml
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Snake.g.resources
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Snake.Properties.Resources.resources
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Snake.csproj.GenerateResource.cache
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Snake.csproj.CopyComplete
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Snake.exe
+C:\Studia\Moje\Semestr V\KCK\Snake\Snake\obj\Debug\Snake.pdb
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake.csprojAssemblyReference.cache
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Images\Author\Czajkowski.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Images\Author\Gabriel.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\MainWindow.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\AuthorPage.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\BestResultsPage.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Settings\CustomizedSettingsPage.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Settings\DifficultyLevelPage.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\MenuPage.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Settings\MusicPage.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\SettingsPage.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Windows\ExitWindow.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\App.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake_Content.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake_MarkupCompile.cache
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake_MarkupCompile.lref
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake.exe
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake.pdb
+C:\Studia\Projects\Snake_Game_WPF\Snake\bin\Debug\Music\Benny_Hill_Yakety_Sax.wav
+C:\Studia\Projects\Snake_Game_WPF\Snake\bin\Debug\Music\Snake_song.wav
+C:\Studia\Projects\Snake_Game_WPF\Snake\bin\Debug\Snake.exe.config
+C:\Studia\Projects\Snake_Game_WPF\Snake\bin\Debug\Snake.exe
+C:\Studia\Projects\Snake_Game_WPF\Snake\bin\Debug\Snake.pdb
+C:\Studia\Projects\Snake_Game_WPF\Snake\bin\Debug\MaterialDesignColors.dll
+C:\Studia\Projects\Snake_Game_WPF\Snake\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Studia\Projects\Snake_Game_WPF\Snake\bin\Debug\WpfAnimatedGif.dll
+C:\Studia\Projects\Snake_Game_WPF\Snake\bin\Debug\MaterialDesignColors.pdb
+C:\Studia\Projects\Snake_Game_WPF\Snake\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Studia\Projects\Snake_Game_WPF\Snake\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Studia\Projects\Snake_Game_WPF\Snake\bin\Debug\WpfAnimatedGif.pdb
+C:\Studia\Projects\Snake_Game_WPF\Snake\bin\Debug\WpfAnimatedGif.xml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\App.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\MainWindow.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\AuthorPage.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\BestResultsPage.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Settings\CustomizedSettingsPage.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Settings\DifficultyLevelPage.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\MenuPage.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Settings\MusicPage.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\SettingsPage.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Windows\ExitWindow.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake.g.resources
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake.Properties.Resources.resources
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake.csproj.GenerateResource.cache
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Snake.csproj.CopyComplete
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\CountdownToStartGamePage.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\CountdownToStartGamePage.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\EnterNicknamePage.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\EnterNicknamePage.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\GamePage.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\GamePage.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\UserControls\NormalFruit.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\UserControls\NormalFruit.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\GameOverPage.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\Pages\Game\GameOverPage.baml
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\UserControls\SpecialFruit.g.cs
+C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\UserControls\SpecialFruit.baml
