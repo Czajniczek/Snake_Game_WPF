@@ -155,7 +155,7 @@
                         MouseEnter="BennySong_Button_MouseEnter"
                         MouseLeave="BennySong_Button_MouseLeave"
                         Style="{StaticResource MaterialDesignRaisedButton}">
-                        BENNY HILL YAKETY SAX
+                        BENNY HILL - YAKETY SAX
                     </Button>
                     <Image
                         Name="RightBennyHillSong_Gif"

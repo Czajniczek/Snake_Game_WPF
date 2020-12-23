@@ -16,5 +16,5 @@ C:\Studia\Projects\Snake_Game_WPF\Snake\App.xaml
 16-343330719
 Images\Author\Czajkowski.xaml;Images\Author\Gabriel.xaml;MainWindow.xaml;Pages\AuthorPage.xaml;Pages\Game\EnterNicknamePage.xaml;Pages\BestResultsPage.xaml;Pages\Game\CountdownToStartGamePage.xaml;Pages\Game\GameOverPage.xaml;Pages\Game\GamePage.xaml;Pages\Settings\CustomizedSettingsPage.xaml;Pages\Settings\DifficultyLevelPage.xaml;Pages\MenuPage.xaml;Pages\Settings\MusicPage.xaml;Pages\SettingsPage.xaml;UserControls\NormalFruit.xaml;UserControls\SpecialFruit.xaml;Windows\ExitWindow.xaml;
 
-False
+True
 
