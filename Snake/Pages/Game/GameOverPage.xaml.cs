@@ -22,18 +22,22 @@ namespace Snake.Pages.Game
     {
         private readonly GameMenu gameMenu;
         private readonly int score;
+        private bool newRecord;
 
-        public GameOverPage(GameMenu gameMenu, int score)
+        public GameOverPage(GameMenu gameMenu, int score, bool newRecord)
         {
             InitializeComponent();
 
             this.gameMenu = gameMenu;
             this.score = score;
+            this.newRecord = newRecord;
         }
 
         private void GameOverPage_Loaded(object sender, RoutedEventArgs e)
         {
             ScoredPoints_TextBlock.Text = score.ToString();
+            if (newRecord) NewRecord_TextBlock.Visibility = Visibility.Visible;
+            else NewRecord_TextBlock.Visibility = Visibility.Hidden;
 
             if (!gameMenu.MusicOn) Music_Icon.Kind = PackIconKind.MusicOff;
             else Music_Icon.Kind = PackIconKind.Music;
