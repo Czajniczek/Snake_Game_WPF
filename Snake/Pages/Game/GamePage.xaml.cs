@@ -465,6 +465,11 @@ namespace Snake.Pages.Game
                         specialFruitDispatcherTimer.Interval = TimeSpan.FromSeconds(specialFruitDelaySeconds);
                         break;
 
+                    case Enums.BonusFruitFrequencyEnum.VeryOften:
+                        specialFruitDelaySeconds = 1;
+                        specialFruitDispatcherTimer.Interval = TimeSpan.FromSeconds(specialFruitDelaySeconds);
+                        break;
+
                     default:
                         break;
                 }
@@ -473,18 +478,24 @@ namespace Snake.Pages.Game
                 {
                     case Enums.SnakeSpeedEnum.Slow:
                         scoreFactor = 5;
-                        gameDelayMiliseconds = 500;
+                        gameDelayMiliseconds = 300;
                         gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(gameDelayMiliseconds);
                         break;
 
                     case Enums.SnakeSpeedEnum.Medium:
                         scoreFactor = 10;
-                        gameDelayMiliseconds = 250;
+                        gameDelayMiliseconds = 200;
                         gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(gameDelayMiliseconds);
                         break;
 
                     case Enums.SnakeSpeedEnum.Fast:
                         scoreFactor = 30;
+                        gameDelayMiliseconds = 100;
+                        gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(gameDelayMiliseconds);
+                        break;
+
+                    case Enums.SnakeSpeedEnum.VeryFast:
+                        scoreFactor = 50;
                         gameDelayMiliseconds = 50;
                         gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(gameDelayMiliseconds);
                         break;
@@ -500,7 +511,7 @@ namespace Snake.Pages.Game
                     case Enums.LevelEnum.Easy:
                         DifficultyLevel_TextBlock.Text = "EASY";
                         scoreFactor = 5;
-                        gameDelayMiliseconds = 500;
+                        gameDelayMiliseconds = 300;
                         specialFruitDelaySeconds = 3;
                         DifficultyLevel_TextBlock.Foreground = new SolidColorBrush(Color.FromRgb(0, 128, 0));
                         gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(gameDelayMiliseconds);
@@ -510,7 +521,7 @@ namespace Snake.Pages.Game
                     case Enums.LevelEnum.Medium:
                         DifficultyLevel_TextBlock.Text = "MEDIUM";
                         scoreFactor = 10;
-                        gameDelayMiliseconds = 250;
+                        gameDelayMiliseconds = 200;
                         specialFruitDelaySeconds = 5;
                         DifficultyLevel_TextBlock.Foreground = new SolidColorBrush(Color.FromRgb(230, 215, 0));
                         gameDispatcherTimer.Interval = TimeSpan.FromMilliseconds(gameDelayMiliseconds);
