@@ -86,6 +86,7 @@
             VerticalAlignment="Top"
             AutoGenerateColumns="False"
             Background="#E2E2E2"
+            CanUserReorderColumns="False"
             CanUserResizeColumns="False"
             CanUserResizeRows="False"
             IsReadOnly="True">

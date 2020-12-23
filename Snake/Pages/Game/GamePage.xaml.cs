@@ -23,34 +23,48 @@ namespace Snake.Pages.Game
     public partial class GamePage : Page
     {
         #region VARIABLES AND OBJECTS
+        #region GAME
         private readonly GameMenu gameMenu;
-
         private readonly DispatcherTimer gameDispatcherTimer;
+        private int gameDelayMiliseconds;
         private List<Rectangle> snake;
         private NormalFruit normalFruit;
+        private readonly Random rand = new Random();
+        #endregion
 
         #region SPECIAL FRUIT
-        SpecialFruit specialFruit;
         private readonly DispatcherTimer specialFruitDispatcherTimer;
+        private int specialFruitDelaySeconds;
+        SpecialFruit specialFruit;
         private List<SpecialFruit> specialFruits;
         #endregion
 
-        private readonly Random rand = new Random();
-        private int scoreFactor = 0;
-        private int score = 0;
-        private int gameDelayMiliseconds = 500;
-        private int specialFruitDelaySeconds = 1;
-        private int X, Y;
-        private int scoreLength = 0;
+        #region SCORE
+        private int scoreFactor;
+        private int score;
+        private int scoreLength;
+        #endregion
+
+        #region NEW RECORD
+        private List<GameResult> resultsList;
+        private StreamReader streamReader;
+        private int bestScore;
+        private bool newRecord;
+        #endregion
+
+        #region SAVE TO .TXT FILE
         private string line;
         private DateTime dateTime;
         private StreamWriter streamWriter;
+        #endregion
 
+        #region KEYS
         private Key LastKey = Key.Right;
-        private bool Top = false;
         private bool Right = true;
+        private bool Top = false;
         private bool Bottom = false;
         private bool Left = false;
+        #endregion
         #endregion
 
         public GamePage(GameMenu gameMenu)
@@ -60,25 +74,27 @@ namespace Snake.Pages.Game
 
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.KeyDown += SnakeMove;
-            //NAJWIĘKSZY PRIORYTET
-            gameDispatcherTimer = new DispatcherTimer(DispatcherPriority.Render);
-            specialFruitDispatcherTimer = new DispatcherTimer();
-            //gameDispatcherTimer = new DispatcherTimer();
-            SetInformations();
 
-            specialFruits = new List<SpecialFruit>();
+            //DispatcherPriority.Send - TOP PRIORITY
+            gameDispatcherTimer = new DispatcherTimer(DispatcherPriority.Send);
+            specialFruitDispatcherTimer = new DispatcherTimer(DispatcherPriority.Send);
+
+            SetInformations();
         }
 
         private void GamePage_Loaded(object sender, RoutedEventArgs e)
         {
             MainGrid.DataContext = gameMenu;
 
+            snake = new List<Rectangle>();
+            specialFruits = new List<SpecialFruit>();
+
+            NewRecord();
+
             dateTime = DateTime.Now;
             streamWriter = new StreamWriter("Results.txt", true);
 
-            snake = new List<Rectangle>();
-
-            #region INICJALIZACJA WĘŻA
+            #region SNAKE INITIALISATION
             Rectangle rectangle = new Rectangle
             {
                 Width = 20,
@@ -87,69 +103,49 @@ namespace Snake.Pages.Game
             };
             Playground.Children.Add(rectangle);
 
-            //USTAWIENIE WĘŻA NA PLANSZY
+            //LOCATION OF THE HOSE ON THE BOARD
             rectangle.SetValue(Canvas.TopProperty, 200.0);
             rectangle.SetValue(Canvas.LeftProperty, 200.0);
+            snake.Add(rectangle);
             #endregion
 
-            snake.Add(rectangle);
             AddNewFruit();
 
             gameDispatcherTimer.Tick += Game;
-            specialFruitDispatcherTimer.Tick += GenerateSpecialFruit;
+            specialFruitDispatcherTimer.Tick += AddSpecialFruit;
             gameDispatcherTimer.Start();
             specialFruitDispatcherTimer.Start();
         }
 
+        #region ADDING FRUITS
         private void AddNewFruit()
         {
             normalFruit = new NormalFruit();
 
-            //int X, Y;
+            int X, Y;
 
             do
             {
                 X = rand.Next(0, 32);
                 Y = rand.Next(0, 22);
-            } while (FruitCanCreate(X, Y));
+            } while (!FruitCanCreate(X * 20, Y * 20));
 
             Playground.Children.Add(normalFruit);
             normalFruit.SetValue(Canvas.TopProperty, (double)(Y * 20));
             normalFruit.SetValue(Canvas.LeftProperty, (double)(X * 20));
         }
 
-        private bool FruitCanCreate(int X, int Y)
-        {
-            return snake.Any(x =>
-            {
-                double elemX = (double)x.GetValue(Canvas.LeftProperty);
-                double elemY = (double)x.GetValue(Canvas.TopProperty);
-
-                if (X == elemX && Y == elemY) return true;
-                return false;
-
-            }) && specialFruits.Any(x =>
-            {
-                double elemX = (double)x.GetValue(Canvas.LeftProperty);
-                double elemY = (double)x.GetValue(Canvas.TopProperty);
-
-                if (X == elemX && Y == elemY)
-                    return true;
-                return false;
-            });
-        }
-
-        private void GenerateSpecialFruit(object sender, EventArgs e)
+        private void AddSpecialFruit(object sender, EventArgs e)
         {
             specialFruit = new SpecialFruit();
 
-            //int X, Y;
+            int X, Y;
 
             do
             {
                 X = rand.Next(0, 32);
                 Y = rand.Next(0, 22);
-            } while (SpecialFruitCanCreate(X, Y));
+            } while (!FruitCanCreate(X * 20, Y * 20));
 
             Playground.Children.Add(specialFruit);
             specialFruits.Add(specialFruit);
@@ -157,31 +153,42 @@ namespace Snake.Pages.Game
             specialFruit.SetValue(Canvas.LeftProperty, (double)(X * 20));
         }
 
-        private bool SpecialFruitCanCreate(int X, int Y)
+        private bool FruitCanCreate(int X, int Y)
         {
-            bool insnake = snake.Any(x =>
-            {
-                double elemX = (double)x.GetValue(Canvas.LeftProperty);
-                double elemY = (double)x.GetValue(Canvas.TopProperty);
-
-                if (X == elemX && Y == elemY) return true;
-                return false;
-            });
-
+            double elemX, elemY;
             double fruitX = (double)normalFruit.GetValue(Canvas.LeftProperty);
             double fruitY = (double)normalFruit.GetValue(Canvas.TopProperty);
 
-            return insnake && fruitX != X && fruitY != Y;
-        }
+            return !snake.Any(x =>
+            {
+                elemX = (double)x.GetValue(Canvas.LeftProperty);
+                elemY = (double)x.GetValue(Canvas.TopProperty);
 
+                if (X == elemX && Y == elemY) return true;
+                return false;
+
+            }) && !specialFruits.Any(x =>
+            {
+                elemX = (double)x.GetValue(Canvas.LeftProperty);
+                elemY = (double)x.GetValue(Canvas.TopProperty);
+
+                if (X == elemX && Y == elemY) return true;
+                return false;
+            }) && fruitX != X && fruitY != Y;
+        }
+        #endregion
+
+        #region GAME
         private void Game(object sender, EventArgs e)
         {
+            double x, y;
+
             for (int i = snake.Count - 1; i > 0; i--)
             {
-                double x = (double)snake[i - 1].GetValue(Canvas.LeftProperty);
-                double y = (double)snake[i - 1].GetValue(Canvas.TopProperty);
-                snake[i].SetValue(Canvas.TopProperty, y);
+                x = (double)snake[i - 1].GetValue(Canvas.LeftProperty);
+                y = (double)snake[i - 1].GetValue(Canvas.TopProperty);
                 snake[i].SetValue(Canvas.LeftProperty, x);
+                snake[i].SetValue(Canvas.TopProperty, y);
             }
 
             //GŁOWA WĘŻA
@@ -193,51 +200,35 @@ namespace Snake.Pages.Game
                 case Key.Left:
                     X -= 20;
                     if (X < 0 || TailHitted(X, Y)) GameOver();
-                    else
-                    {
-                        snake[0].SetValue(Canvas.TopProperty, Y);
-                        snake[0].SetValue(Canvas.LeftProperty, X);
-                    }
+                    else SnakeHead(X: X, Y: Y);
                     break;
 
                 case Key.Right:
                     X += 20;
                     if (X >= 640 || TailHitted(X, Y)) GameOver();
-                    else
-                    {
-                        snake[0].SetValue(Canvas.TopProperty, Y);
-                        snake[0].SetValue(Canvas.LeftProperty, X);
-                    }
+                    else SnakeHead(X: X, Y: Y);
                     break;
 
                 case Key.Up:
                     Y -= 20;
                     if (Y < 0 || TailHitted(X, Y)) GameOver();
-                    else
-                    {
-                        snake[0].SetValue(Canvas.TopProperty, Y);
-                        snake[0].SetValue(Canvas.LeftProperty, X);
-                    }
+                    else SnakeHead(X: X, Y: Y);
                     break;
 
                 case Key.Down:
                     Y += 20;
                     if (Y >= 440 || TailHitted(X, Y)) GameOver();
-                    else
-                    {
-                        snake[0].SetValue(Canvas.TopProperty, Y);
-                        snake[0].SetValue(Canvas.LeftProperty, X);
-                    }
+                    else SnakeHead(X: X, Y: Y);
                     break;
 
                 default:
                     break;
             }
 
-            var fruit = Playground.Children.OfType<UserControl>().FirstOrDefault(x =>
+            var fruit = Playground.Children.OfType<UserControl>().FirstOrDefault(i =>
             {
-                double elemX = (double)x.GetValue(Canvas.LeftProperty);
-                double elemY = (double)x.GetValue(Canvas.TopProperty);
+                double elemX = (double)i.GetValue(Canvas.LeftProperty);
+                double elemY = (double)i.GetValue(Canvas.TopProperty);
 
                 if (X == elemX && Y == elemY) return true;
                 return false;
@@ -255,7 +246,7 @@ namespace Snake.Pages.Game
                 {
                     if (gameDelayMiliseconds > 50)
                     {
-                        gameDelayMiliseconds -= 10;
+                        gameDelayMiliseconds -= 5;
                         gameDispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, gameDelayMiliseconds);
                     }
                 }
@@ -265,59 +256,19 @@ namespace Snake.Pages.Game
                 AddSnakeElem();
                 AddSnakeElem();
                 Playground.Children.Remove(special);
+                specialFruits.Remove(special);
                 score += 50;
                 Points_TextBlock.Text = score.ToString();
-                specialFruits.Remove(special);
 
                 if (!gameMenu.OwnSettings)
                 {
                     if (gameDelayMiliseconds > 50)
                     {
-                        gameDelayMiliseconds -= 20;
+                        gameDelayMiliseconds -= 10;
                         gameDispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, gameDelayMiliseconds);
                     }
                 }
             }
-        }
-
-        private void GameOver()
-        {
-            specialFruitDispatcherTimer.Stop();
-            gameDispatcherTimer.Stop();
-
-            scoreLength = score.ToString().Length;
-
-            switch (scoreLength)
-            {
-                case 1:
-                    line = "000" + score.ToString() + " " + gameMenu.Nickname + " " + gameMenu.Level.ToString().ToUpper() + " " + dateTime.ToShortDateString().ToString();
-                    streamWriter.WriteLine(line);
-                    streamWriter.Close();
-                    break;
-
-                case 2:
-                    line = "00" + score.ToString() + " " + gameMenu.Nickname + " " + gameMenu.Level.ToString().ToUpper() + " " + dateTime.ToShortDateString().ToString();
-                    streamWriter.WriteLine(line);
-                    streamWriter.Close();
-                    break;
-
-                case 3:
-                    line = "0" + score.ToString() + " " + gameMenu.Nickname + " " + gameMenu.Level.ToString().ToUpper() + " " + dateTime.ToShortDateString().ToString();
-                    streamWriter.WriteLine(line);
-                    streamWriter.Close();
-                    break;
-
-                case 4:
-                    line = score.ToString() + " " + gameMenu.Nickname + " " + gameMenu.Level.ToString().ToUpper() + " " + dateTime.ToShortDateString().ToString();
-                    streamWriter.WriteLine(line);
-                    streamWriter.Close();
-                    break;
-
-                default:
-                    break;
-            }
-
-            NavigationService.Navigate(new GameOverPage(gameMenu: gameMenu, score: score));
         }
 
         private bool TailHitted(double X, double Y)
@@ -325,13 +276,16 @@ namespace Snake.Pages.Game
             for (int i = 1; i < snake.Count; i++)
             {
                 if (X == (double)snake[i].GetValue(Canvas.LeftProperty) &&
-                    Y == (double)snake[i].GetValue(Canvas.TopProperty))
-                {
-                    return true;
-                }
+                    Y == (double)snake[i].GetValue(Canvas.TopProperty)) return true;
             }
 
             return false;
+        }
+
+        private void SnakeHead(double X, double Y)
+        {
+            snake[0].SetValue(Canvas.LeftProperty, X);
+            snake[0].SetValue(Canvas.TopProperty, Y);
         }
 
         private void AddSnakeElem()
@@ -352,56 +306,142 @@ namespace Snake.Pages.Game
             snake.Add(rect);
         }
 
+        #region MOVING THE SNAKE
         private void SnakeMove(object sender, KeyEventArgs e)
         {
             switch (e.Key)
             {
                 case Key.Left:
-                    if (!Right || Left)
+                    if (!Right)
                     {
-                        LastKey = Key.Left;
-                        Left = true;
-                        Right = false;
-                        Top = false;
-                        Bottom = false;
+                        if (Left) break;
+                        else
+                        {
+                            LastKey = Key.Left;
+                            Left = true;
+                            Right = false;
+                            Top = false;
+                            Bottom = false;
+                        }
                     }
                     break;
 
                 case Key.Right:
-                    if (!Left || Right)
+                    if (!Left)
                     {
-                        LastKey = Key.Right;
-                        Right = true;
-                        Left = false;
-                        Top = false;
-                        Bottom = false;
+                        if (Right) break;
+                        else
+                        {
+                            LastKey = Key.Right;
+                            Right = true;
+                            Left = false;
+                            Top = false;
+                            Bottom = false;
+                        }
                     }
                     break;
 
                 case Key.Up:
-                    if (!Bottom || Top)
+                    if (!Bottom)
                     {
-                        LastKey = Key.Up;
-                        Top = true;
-                        Left = false;
-                        Right = false;
-                        Bottom = false;
+                        if (Top) break;
+                        else
+                        {
+                            LastKey = Key.Up;
+                            Top = true;
+                            Left = false;
+                            Right = false;
+                            Bottom = false;
+                        }
                     }
                     break;
 
                 case Key.Down:
-                    if (!Top || Bottom)
+                    if (!Top)
                     {
-                        LastKey = Key.Down;
-                        Bottom = true;
-                        Top = false;
-                        Left = false;
-                        Right = false;
+                        if (Bottom) break;
+                        else
+                        {
+                            LastKey = Key.Down;
+                            Bottom = true;
+                            Top = false;
+                            Left = false;
+                            Right = false;
+                        }
                     }
                     break;
             }
+            #endregion
+        }
+        #endregion
+
+        #region GAME OVER
+        private void GameOver()
+        {
+            specialFruitDispatcherTimer.Stop();
+            gameDispatcherTimer.Stop();
+
+            scoreLength = score.ToString().Length;
+
+            switch (scoreLength)
+            {
+                case 1:
+                    if (gameMenu.OwnSettings) line = "000" + score.ToString() + " " + gameMenu.Nickname + " " + "CUSTOMIZED" + " " + dateTime.ToShortDateString().ToString();
+                    else line = "000" + score.ToString() + " " + gameMenu.Nickname + " " + gameMenu.Level.ToString().ToUpper() + " " + dateTime.ToShortDateString().ToString();
+                    streamWriter.WriteLine(line);
+                    streamWriter.Close();
+                    break;
+
+                case 2:
+                    if (gameMenu.OwnSettings) line = "00" + score.ToString() + " " + gameMenu.Nickname + " " + "CUSTOMIZED" + " " + dateTime.ToShortDateString().ToString();
+                    else line = "00" + score.ToString() + " " + gameMenu.Nickname + " " + gameMenu.Level.ToString().ToUpper() + " " + dateTime.ToShortDateString().ToString();
+                    streamWriter.WriteLine(line);
+                    streamWriter.Close();
+                    break;
+
+                case 3:
+                    if (gameMenu.OwnSettings) line = "0" + score.ToString() + " " + gameMenu.Nickname + " " + "CUSTOMIZED" + " " + dateTime.ToShortDateString().ToString();
+                    else line = "0" + score.ToString() + " " + gameMenu.Nickname + " " + gameMenu.Level.ToString().ToUpper() + " " + dateTime.ToShortDateString().ToString();
+                    streamWriter.WriteLine(line);
+                    streamWriter.Close();
+                    break;
+
+                case 4:
+                    if (gameMenu.OwnSettings) line = score.ToString() + " " + gameMenu.Nickname + " " + "CUSTOMIZED" + " " + dateTime.ToShortDateString().ToString();
+                    else line = score.ToString() + " " + gameMenu.Nickname + " " + gameMenu.Level.ToString().ToUpper() + " " + dateTime.ToShortDateString().ToString();
+                    streamWriter.WriteLine(line);
+                    streamWriter.Close();
+                    break;
+
+                default:
+                    break;
+            }
+
+            newRecord = score > bestScore;
+            NavigationService.Navigate(new GameOverPage(gameMenu: gameMenu, score: score, newRecord: newRecord));
         }
 
+        private void NewRecord()
+        {
+            resultsList = new List<GameResult>();
+            streamReader = new StreamReader("Results.txt");
+            string readLine;
+
+            while ((readLine = streamReader.ReadLine()) != null)
+            {
+                string[] row = readLine.Split(' ');
+                resultsList.Add(new GameResult(ImagePath: null, Place: "", Score: row[0], Nickname: row[1], DifficultyLevel: row[2], Date: row[3]));
+            }
+            streamReader.Close();
+
+            resultsList.Sort((GameResult x, GameResult y) => y.Score.CompareTo(x.Score));
+
+            if (resultsList.Count == 0) newRecord = true;
+            else bestScore = Convert.ToInt32(resultsList[0].Score);
+        }
+        #endregion
+
+        #region SET INFORMATIONS
         private void SetInformations()
         {
             if (gameMenu.OwnSettings)
@@ -492,5 +532,6 @@ namespace Snake.Pages.Game
                 }
             }
         }
+        #endregion
     }
 }

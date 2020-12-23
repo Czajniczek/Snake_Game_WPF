@@ -47,7 +47,7 @@
                 Name="Playground"
                 Width="640"
                 Height="440"
-                Background="White" />
+                Background="Black" />
         </Border>
         <Grid
             Grid.Row="2"
