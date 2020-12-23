@@ -10,6 +10,7 @@ namespace Snake.Enums
     {
         Rarely,
         Normally,
-        Often
+        Often,
+        VeryOften
     }
 }

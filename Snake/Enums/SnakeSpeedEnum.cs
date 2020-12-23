@@ -10,6 +10,7 @@ namespace Snake.Enums
     {
         Slow,
         Medium,
-        Fast
+        Fast,
+        VeryFast
     }
 }

@@ -63,8 +63,15 @@ namespace Snake.Pages.Settings
 
                 case BonusFruitFrequencyEnum.Often:
                     BonusFruit_TextBlock.Text = "OFTEN";
-                    RightBonusFruit_Button.IsEnabled = false;
+                    LeftBonusFruit_Button.IsEnabled = true;
+                    RightBonusFruit_Button.IsEnabled = true;
                     SetImage(imageName1: LeftBonusFruit_Image, imageName2: RightBonusFruit_Image, path: "/Images/Settings/CustomizedSettings/BonusFruit/Often.png");
+                    break;
+
+                case BonusFruitFrequencyEnum.VeryOften:
+                    BonusFruit_TextBlock.Text = "VERY OFTEN";
+                    RightBonusFruit_Button.IsEnabled = false;
+                    SetImage(imageName1: LeftBonusFruit_Image, imageName2: RightBonusFruit_Image, path: "/Images/Settings/CustomizedSettings/BonusFruit/VeryOften.png");
                     break;
 
                 default:
@@ -104,9 +111,17 @@ namespace Snake.Pages.Settings
 
                 case SnakeSpeedEnum.Fast:
                     DifficultyLevel_TextBlock.Text = "FAST";
-                    RightDifficultyLevel_Button.IsEnabled = false;
+                    RightDifficultyLevel_Button.IsEnabled = true;
+                    LeftDifficultyLevel_Button.IsEnabled = true;
                     DifficultyLevel_TextBlock.Foreground = new SolidColorBrush(Color.FromRgb(153, 0, 0));
                     SetImage(imageName1: LeftDifficultyLevel_Image, imageName2: RightDifficultyLevel_Image, path: "/Images/Settings/CustomizedSettings/SnakeSpeed/Fast.png");
+                    break;
+
+                case SnakeSpeedEnum.VeryFast:
+                    DifficultyLevel_TextBlock.Text = "VERY FAST";
+                    RightDifficultyLevel_Button.IsEnabled = false;
+                    DifficultyLevel_TextBlock.Foreground = new SolidColorBrush(Color.FromRgb(255, 0, 0));
+                    SetImage(imageName1: LeftDifficultyLevel_Image, imageName2: RightDifficultyLevel_Image, path: "/Images/Settings/CustomizedSettings/SnakeSpeed/VeryFast.png");
                     break;
 
                 default:

@@ -310,6 +310,8 @@
     <Resource Include="Images\Game\SpecialFruit\Pineapple.gif" />
     <Resource Include="Images\Game\SpecialFruit\Orange3.gif" />
     <Resource Include="Images\Game\SpecialFruit\Watermelon.gif" />
+    <Resource Include="Images\Settings\CustomizedSettings\SnakeSpeed\VeryFast.png" />
+    <Resource Include="Images\Settings\CustomizedSettings\BonusFruit\VeryOften.png" />
     <Content Include="Music\Benny_Hill_Yakety_Sax.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
