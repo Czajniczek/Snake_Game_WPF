@@ -46,7 +46,6 @@ namespace Snake.Pages.Game
         #region BUTTONS CLICKS
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            gameMenu.Nickname = "";
             NavigationService.Navigate(new MenuPage(gameMenu: gameMenu));
         }
 
@@ -79,7 +78,6 @@ namespace Snake.Pages.Game
 
         private void MenuButton_Click(object sender, RoutedEventArgs e)
         {
-            gameMenu.Nickname = "";
             NavigationService.Navigate(new MenuPage(gameMenu: gameMenu));
         }
         #endregion

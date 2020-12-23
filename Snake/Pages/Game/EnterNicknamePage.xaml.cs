@@ -31,7 +31,7 @@ namespace Snake.Pages
 
         private void EnterNicknamePage_Loaded(object sender, RoutedEventArgs e)
         {
-            //gameMenu.Nickname = "Gabrielos";
+            gameMenu.Nickname = "";
             Nickname_WrapPanel.DataContext = gameMenu;
             Nickname_Text_Box.Focus();
 
