@@ -198,24 +198,28 @@ namespace Snake.Pages.Game
             switch (LastKey)
             {
                 case Key.Left:
+                case Key.A:
                     X -= 20;
                     if (X < 0 || TailHitted(X, Y)) GameOver();
                     else SnakeHead(X: X, Y: Y);
                     break;
 
                 case Key.Right:
+                case Key.D:
                     X += 20;
                     if (X >= 640 || TailHitted(X, Y)) GameOver();
                     else SnakeHead(X: X, Y: Y);
                     break;
 
                 case Key.Up:
+                case Key.W:
                     Y -= 20;
                     if (Y < 0 || TailHitted(X, Y)) GameOver();
                     else SnakeHead(X: X, Y: Y);
                     break;
 
                 case Key.Down:
+                case Key.S:
                     Y += 20;
                     if (Y >= 440 || TailHitted(X, Y)) GameOver();
                     else SnakeHead(X: X, Y: Y);
@@ -312,6 +316,7 @@ namespace Snake.Pages.Game
             switch (e.Key)
             {
                 case Key.Left:
+                case Key.A:
                     if (!Right)
                     {
                         if (Left) break;
@@ -327,6 +332,7 @@ namespace Snake.Pages.Game
                     break;
 
                 case Key.Right:
+                case Key.D:
                     if (!Left)
                     {
                         if (Right) break;
@@ -342,6 +348,7 @@ namespace Snake.Pages.Game
                     break;
 
                 case Key.Up:
+                case Key.W:
                     if (!Bottom)
                     {
                         if (Top) break;
@@ -357,6 +364,7 @@ namespace Snake.Pages.Game
                     break;
 
                 case Key.Down:
+                case Key.S:
                     if (!Top)
                     {
                         if (Bottom) break;
