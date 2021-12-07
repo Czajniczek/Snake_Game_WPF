@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Studia\Projects\Snake_Game_WPF\Snake\obj\Debug\
+C:\Programowanie\GitHub\Projekty\Snake_Game_WPF\Snake\obj\Debug\
 Snake
 none
 false
 DEBUG;TRACE
-C:\Studia\Projects\Snake_Game_WPF\Snake\App.xaml
+C:\Programowanie\GitHub\Projekty\Snake_Game_WPF\Snake\App.xaml
 171709499322
 2473350567
 25-1145598841
-16-343330719
+162107060331
 Images\Author\Czajkowski.xaml;Images\Author\Gabriel.xaml;MainWindow.xaml;Pages\AuthorPage.xaml;Pages\Game\EnterNicknamePage.xaml;Pages\BestResultsPage.xaml;Pages\Game\CountdownToStartGamePage.xaml;Pages\Game\GameOverPage.xaml;Pages\Game\GamePage.xaml;Pages\Settings\CustomizedSettingsPage.xaml;Pages\Settings\DifficultyLevelPage.xaml;Pages\MenuPage.xaml;Pages\Settings\MusicPage.xaml;Pages\SettingsPage.xaml;UserControls\NormalFruit.xaml;UserControls\SpecialFruit.xaml;Windows\ExitWindow.xaml;
 
 False
